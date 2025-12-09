@@ -350,269 +350,885 @@ export const topics = [
   }
 ];
 
+export const competencies = [
+  { id: 1, title: "CE.1: Vida Activa", description: "Adoptar un estilo de vida activo y saludable, practicando regularmente actividades físicas y lúdicas." },
+  { id: 2, title: "CE.2: Resolución Motriz", description: "Adaptar los elementos propios del esquema corporal y las capacidades físicas... para resolver problemas en situaciones motrices." },
+  { id: 3, title: "CE.3: Autorregulación", description: "Desarrollar procesos de autorregulación emocional e interacción social en situaciones motrices." },
+  { id: 4, title: "CE.4: Cultura Motriz", description: "Reconocer y valorar las manifestaciones de la cultura motriz, el juego y el deporte." },
+  { id: 5, title: "CE.5: Sostenibilidad", description: "Valorar el entorno y el medio natural, participando en actividades físicas de manera sostenible." }
+];
+
 export const gameIdeas = [
   {
     category: "1. Habilidades Motrices Básicas (HMB)",
-    games: [
+    subcategories: [
       {
-        name: "El Suelo es Lava (Desplazamientos)",
-        description: "Desplazarse por el gimnasio subiéndose a bancos, aros o colchonetas sin tocar el suelo.",
-        variant: "Hacerlo por parejas cogidos de la mano.",
-        material: "Bancos, colchonetas, aros, plintos.",
-        objective: "Mejorar el equilibrio dinámico y la adaptación del desplazamiento.",
-        neae: {
-          blind: "Circuito cerrado con guía táctil y relieves.",
-          deaf: "Demostración visual previa del recorrido.",
-          motor: "Recorrido alternativo plano y ancho sin obstáculos de altura.",
-          down: "Recorrido simplificado y acompañamiento.",
-          tea: "Anticipación visual del recorrido (mapa).",
-          tdah: "Cronometrar tiempos cortos para mantener atención.",
-          high_cap: "Añadir tareas cognitivas (coger objetos de colores) durante el recorrido."
-        }
+        name: "Desplazamientos y Saltos",
+        games: [
+          {
+            name: "El Suelo es Lava",
+            description: "Desplazarse por el gimnasio subiéndose a bancos, aros o colchonetas sin tocar el suelo.",
+            variant: "Hacerlo por parejas cogidos de la mano.",
+            material: "Bancos, colchonetas, aros, plintos.",
+            objective: "Mejorar el equilibrio dinámico y la adaptación del desplazamiento.",
+            neae: {
+              blind: "Circuito cerrado con guía táctil y relieves.",
+              deaf: "Demostración visual previa del recorrido.",
+              motor: "Recorrido alternativo plano y ancho sin obstáculos de altura.",
+              down: "Recorrido simplificado y acompañamiento.",
+              tea: "Anticipación visual del recorrido (mapa).",
+              tdah: "Cronometrar tiempos cortos para mantener atención.",
+              high_cap: "Añadir tareas cognitivas (coger objetos de colores) durante el recorrido."
+            }
+          },
+          {
+            name: "Carrera de Relevos Loca",
+            description: "Relevos donde cada posta se hace de una forma: a la pata coja, de espaldas, saltando a pies juntos.",
+            variant: "Transportando un objeto (testigo) diferente en cada posta.",
+            material: "Conos, testigos.",
+            objective: "Velocidad de desplazamiento y coordinación.",
+            neae: {
+              blind: "Carrera con guía de la mano.",
+              deaf: "Salida visual (pañuelo).",
+              motor: "Distancia reducida o desplazamiento en silla.",
+              down: "Formas de desplazamiento sencillas.",
+              tea: "Carril delimitado.",
+              tdah: "Relevos muy cortos.",
+              high_cap: "Inventar su propia forma de desplazamiento."
+            }
+          },
+          {
+            name: "Cazadores de Colas",
+            description: "Todos con un pañuelo en el pantalón (cola). Deben robar colas sin perder la suya.",
+            variant: "Por equipos.",
+            material: "Pañuelos/Petos.",
+            objective: "Velocidad de reacción y esquiva.",
+            neae: {
+              blind: "Juega con pareja guía que avisa.",
+              deaf: "Atención visual periférica.",
+              motor: "Zona protegida donde no le pueden robar.",
+              down: "Cola más larga (fácil de coger).",
+              tea: "Zona de seguridad para descansar.",
+              tdah: "Juego intenso (ideal).",
+              high_cap: "Estrategia de equipo."
+            }
+          }
+        ]
       },
       {
-        name: "La Croqueta (Giros)",
-        description: "Rodar sobre el eje longitudinal en colchonetas.",
-        variant: "Rodar transportando un balón medicinal con las manos.",
-        material: "Colchonetas.",
-        objective: "Dominio del giro sobre el eje longitudinal.",
-        neae: {
-          blind: "Superficie muy acolchada y delimitada.",
-          deaf: "Imitación del modelo.",
-          motor: "Ayuda manual para iniciar el giro.",
-          down: "Giro asistido.",
-          tea: "Espacio individual delimitado.",
-          tdah: "Competición de velocidad (carreras de croquetas).",
-          high_cap: "Combinar giro con lanzamiento final."
-        }
+        name: "Giros",
+        games: [
+          {
+            name: "La Croqueta",
+            description: "Rodar sobre el eje longitudinal en colchonetas.",
+            variant: "Rodar transportando un balón medicinal con las manos.",
+            material: "Colchonetas.",
+            objective: "Dominio del giro sobre el eje longitudinal.",
+            neae: {
+              blind: "Superficie muy acolchada y delimitada.",
+              deaf: "Imitación del modelo.",
+              motor: "Ayuda manual para iniciar el giro.",
+              down: "Giro asistido.",
+              tea: "Espacio individual delimitado.",
+              tdah: "Competición de velocidad.",
+              high_cap: "Combinar giro con lanzamiento final."
+            }
+          },
+          {
+            name: "Troncos Rodantes",
+            description: "Por grupos de 4 tumbados juntos. Uno rueda por encima de los otros 3.",
+            variant: "Hacerlo en pendiente suave.",
+            material: "Colchonetas.",
+            objective: "Confianza y giro controlado.",
+            neae: {
+              blind: "Ser el tronco de base (estático).",
+              deaf: "Observación.",
+              motor: "Rol de base.",
+              down: "Supervisión directa.",
+              tea: "Rol fijo.",
+              tdah: "Cambio rápido.",
+              high_cap: "Organizar al grupo."
+            }
+          },
+          {
+            name: "Giro-Basket",
+            description: "Dar 3 vueltas sobre sí mismo y lanzar a canasta (mareado).",
+            variant: "Girar sobre un banco sueco antes de lanzar.",
+            material: "Balones, canasta.",
+            objective: "Reequilibrio tras giro.",
+            neae: {
+              blind: "Giro de la mano del profe y lanzamiento a sonido.",
+              deaf: "Sin adaptación.",
+              motor: "Giro en silla (360º).",
+              down: "Menos vueltas (1).",
+              tea: "Evitar mareo si hay hipersensibilidad vestibular.",
+              tdah: "Lanzamiento rápido.",
+              high_cap: "Tiro lejano."
+            }
+          }
+        ]
       },
       {
-        name: "Los 10 Pases (Lanzamientos)",
-        description: "Dos equipos. Deben dar 10 pases seguidos sin que el otro equipo intercepte el balón.",
-        variant: "No se puede devolver el balón a quien te lo pasó.",
-        material: "Balón de espuma.",
-        objective: "Mejorar pase y recepción en situación dinámica.",
-        neae: {
-          blind: "Balón sonoro y pases mano a mano.",
-          deaf: "Uso de petos visuales brillantes.",
-          motor: "Jugador comodín sin oposición directa.",
-          down: "Reducir número de pases (5 pases).",
-          tea: "Reglas muy claras y visuales.",
-          tdah: "Cambio de roles frecuente.",
-          high_cap: "Añadir regla de 'no repetir receptor'."
-        }
+        name: "Lanzamientos y Recepciones",
+        games: [
+          {
+            name: "Los 10 Pases",
+            description: "Dos equipos. Deben dar 10 pases seguidos sin que el otro equipo intercepte el balón.",
+            variant: "No se puede devolver el balón a quien te lo pasó.",
+            material: "Balón de espuma.",
+            objective: "Mejorar pase y recepción en situación dinámica.",
+            neae: {
+              blind: "Balón sonoro y pases mano a mano.",
+              deaf: "Uso de petos visuales brillantes.",
+              motor: "Jugador comodín sin oposición directa.",
+              down: "Reducir número de pases (5 pases).",
+              tea: "Reglas muy claras y visuales.",
+              tdah: "Cambio de roles frecuente.",
+              high_cap: "Añadir regla de 'no repetir receptor'."
+            }
+          },
+          {
+            name: "Balón Prisionero (Brilé)",
+            description: "Dos campos. Si te dan, vas al cementerio. Si coges al vuelo, salvas vida.",
+            variant: "Jugar con 2 balones.",
+            material: "Balones espuma.",
+            objective: "Coordinación óculo-manual.",
+            neae: {
+              blind: "Juega protegido o lanza a zona fija.",
+              deaf: "Atención visual.",
+              motor: "Zona inmune.",
+              down: "Campo más pequeño.",
+              tea: "Rol de lanzador fijo.",
+              tdah: "Juego con 3 balones.",
+              high_cap: "Estrategia de eliminación."
+            }
+          },
+          {
+            name: "Derribar el Castillo",
+            description: "Un equipo protege un cono central, el otro pasa el balón para intentar derribarlo.",
+            variant: "Dos castillos.",
+            material: "Conos, balones.",
+            objective: "Precisión y táctica.",
+            neae: {
+              blind: "Defensor con cascabeles.",
+              deaf: "Señas.",
+              motor: "Defensor estático.",
+              down: "Castillo más grande.",
+              tea: "Rol definido.",
+              tdah: "Rotación ataque/defensa.",
+              high_cap: "Dirección de equipo."
+            }
+          }
+        ]
       },
       {
-        name: "Estatuas (Equilibrio)",
-        description: "Moverse al ritmo de la música. Cuando para, quedarse inmóvil en una postura (pata coja, etc.).",
-        variant: "Estatuas por parejas (puntos de apoyo compartidos).",
-        material: "Equipo de música.",
-        objective: "Control postural y equilibrio estático.",
-        neae: {
-          blind: "Contacto con compañero o pared.",
-          deaf: "Señal visual (pañuelo) cuando para la música.",
-          motor: "Posturas adaptadas (sentados, rodillas).",
-          down: "Imitación de posturas sencillas.",
-          tea: "Uso de pictogramas de posturas.",
-          tdah: "Cambios de ritmo muy frecuentes.",
-          high_cap: "Posturas creativas complejas."
-        }
+        name: "Equilibrio",
+        games: [
+          {
+            name: "Estatuas Musicales",
+            description: "Bailar y parar en postura de equilibrio al cesar la música.",
+            variant: "Equilibrio sobre un pie, sobre rodillas...",
+            material: "Música.",
+            objective: "Equilibrio estático.",
+            neae: {
+              blind: "Contacto pared.",
+              deaf: "Señal visual.",
+              motor: "Postura adaptada.",
+              down: "Imitación.",
+              tea: "Pictogramas.",
+              tdah: "Cambios rápidos.",
+              high_cap: "Posturas yoga."
+            }
+          },
+          {
+            name: "Batalla de Gallos",
+            description: "En cuclillas, intentar desequilibrar al compañero empujando con las manos.",
+            variant: "A la pata coja.",
+            material: "Colchonetas.",
+            objective: "Equilibrio dinámico con oposición.",
+            neae: {
+              blind: "Contacto continuo.",
+              deaf: "Sin adaptación.",
+              motor: "Sentados en suelo.",
+              down: "Supervisión.",
+              tea: "Evitar contacto brusco.",
+              tdah: "Rondas cortas.",
+              high_cap: "Torneo."
+            }
+          },
+          {
+            name: "El Funambulista",
+            description: "Caminar sobre bancos suecos invertidos o líneas del suelo.",
+            variant: "Transportando un saquito en la cabeza.",
+            material: "Bancos, saquitos.",
+            objective: "Equilibrio en altura.",
+            neae: {
+              blind: "De la mano del profe.",
+              deaf: "Sin adaptación.",
+              motor: "Línea ancha en suelo.",
+              down: "Banco normal (parte ancha).",
+              tea: "Recorrido marcado.",
+              tdah: "Circuito.",
+              high_cap: "Ojos cerrados."
+            }
+          }
+        ]
       }
     ]
   },
   {
     category: "2. Juegos Motores",
-    games: [
+    subcategories: [
       {
-        name: "El Balón Viajero (Cooperativo)",
-        description: "Transportar un balón gigante (o colchoneta) entre toda la clase sin usar las manos.",
-        variant: "Hacerlo con los ojos vendados (guiados por uno).",
-        material: "Balón gigante o colchoneta.",
-        objective: "Fomentar la cooperación y comunicación.",
-        neae: {
-          blind: "Contacto continuo con el objeto y compañeros.",
-          deaf: "Liderazgo visual en la estrategia.",
-          motor: "Uso de silla como soporte de empuje.",
-          down: "Posición central protegida.",
-          tea: "Rol específico definido.",
-          tdah: "Rol de director de movimiento.",
-          high_cap: "Diseñar la estrategia del grupo."
-        }
+        name: "Cooperativos",
+        games: [
+          {
+            name: "El Balón Viajero",
+            description: "Transportar balón gigante entre todos sin manos.",
+            variant: "Ojos vendados.",
+            material: "Balón gigante.",
+            objective: "Cooperación.",
+            neae: {
+              blind: "Contacto continuo.",
+              deaf: "Liderazgo visual.",
+              motor: "Soporte silla.",
+              down: "Posición central.",
+              tea: "Rol específico.",
+              tdah: "Director.",
+              high_cap: "Estrategia."
+            }
+          },
+          {
+            name: "El Paracaídas",
+            description: "Hacer olas, iglú, cambiar de sitio por debajo.",
+            variant: "Meter una pelota y que no caiga.",
+            material: "Paracaídas.",
+            objective: "Sincronización grupal.",
+            neae: {
+              blind: "Agarrar asa fija.",
+              deaf: "Imitación.",
+              motor: "Desde la silla participa igual.",
+              down: "Instrucciones simples.",
+              tea: "Anticipar el 'iglú' (oscuridad).",
+              tdah: "Juegos movidos.",
+              high_cap: "Coordinar movimientos."
+            }
+          },
+          {
+            name: "Sillas Musicales Cooperativas",
+            description: "Nadie se elimina. Se quitan sillas pero todos deben subirse a las que quedan.",
+            variant: "Bancos suecos.",
+            material: "Sillas/Bancos, música.",
+            objective: "Contacto y ayuda.",
+            neae: {
+              blind: "Ayuda para subir.",
+              deaf: "Señal visual.",
+              motor: "Base de apoyo para otros.",
+              down: "Ayuda física.",
+              tea: "Evitar aglomeración excesiva.",
+              tdah: "Organizar subida.",
+              high_cap: "Estrategia de colocación."
+            }
+          }
+        ]
       },
       {
-        name: "El Pañuelo (Tradicional)",
-        description: "Dos equipos numerados. El profe dice un número y salen a coger el pañuelo.",
-        variant: "Decir operaciones matemáticas (2+2) en vez del número.",
-        material: "Pañuelo.",
-        objective: "Velocidad de reacción.",
-        neae: {
-          blind: "El pañuelo es un compañero que llama (sonido).",
-          deaf: "El profe levanta dedos con el número.",
-          motor: "Salida con ventaja de distancia.",
-          down: "Emparejamiento equilibrado.",
-          tea: "Evitar gritos excesivos.",
-          tdah: "Variar números rápidamente.",
-          high_cap: "Operaciones complejas para salir."
-        }
+        name: "Tradicionales",
+        games: [
+          {
+            name: "El Pañuelo",
+            description: "Correr a por el pañuelo al oír el número.",
+            variant: "Operaciones matemáticas.",
+            material: "Pañuelo.",
+            objective: "Velocidad reacción.",
+            neae: {
+              blind: "Llamada sonora.",
+              deaf: "Dedos mano.",
+              motor: "Ventaja distancia.",
+              down: "Parejas equilibradas.",
+              tea: "Sin gritos.",
+              tdah: "Variedad.",
+              high_cap: "Cálculo mental."
+            }
+          },
+          {
+            name: "Carreras de Sacos",
+            description: "Desplazarse saltando dentro de un saco.",
+            variant: "Relevos.",
+            material: "Sacos.",
+            objective: "Salto y diversión.",
+            neae: {
+              blind: "Guía lateral.",
+              deaf: "Salida visual.",
+              motor: "Sin saco, con balón entre piernas.",
+              down: "Distancia corta.",
+              tea: "Saco de su color favorito.",
+              tdah: "Competición.",
+              high_cap: "Técnica salto."
+            }
+          },
+          {
+            name: "Chapitas",
+            description: "Circuito en el suelo golpeando chapas.",
+            variant: "Crear sus propios circuitos con tiza.",
+            material: "Chapas, tiza.",
+            objective: "Motricidad fina.",
+            neae: {
+              blind: "Chapas con relieve/sonido.",
+              deaf: "Sin adaptación.",
+              motor: "Chapa más grande (tapón).",
+              down: "Circuito ancho.",
+              tea: "Reglas estrictas.",
+              tdah: "Turnos rápidos.",
+              high_cap: "Diseño circuito."
+            }
+          }
+        ]
       },
       {
-        name: "La Gallinita Ciega (Sensorial)",
-        description: "Uno con ojos vendados intenta pillar a los demás guiándose por el sonido.",
-        variant: "Los demás no pueden moverse, solo hacer ruidos.",
-        material: "Antifaz.",
-        objective: "Desarrollo de la percepción auditiva.",
-        neae: {
-          blind: "Rol protagonista natural.",
-          deaf: "Jugar con vibraciones (golpes en suelo) o tacto.",
-          motor: "Espacio reducido.",
-          down: "Guía de apoyo.",
-          tea: "Anticipación del contacto físico.",
-          tdah: "Turnos cortos de gallinita.",
-          high_cap: "Identificar compañeros por voz distorsionada."
-        }
+        name: "Sensoriales",
+        games: [
+          {
+            name: "La Gallinita Ciega",
+            description: "Pillar con ojos vendados guiándose por sonido.",
+            variant: "Gallinita sentada.",
+            material: "Antifaz.",
+            objective: "Percepción auditiva.",
+            neae: {
+              blind: "Protagonista.",
+              deaf: "Vibraciones.",
+              motor: "Espacio reducido.",
+              down: "Guía.",
+              tea: "Anticipación.",
+              tdah: "Turnos cortos.",
+              high_cap: "Reconocer voces."
+            }
+          },
+          {
+            name: "El Arca de Noé",
+            description: "Parejas de animales (sonidos) deben encontrarse con ojos cerrados.",
+            variant: "Tríos.",
+            material: "Antifaces.",
+            objective: "Discriminación auditiva.",
+            neae: {
+              blind: "Líder.",
+              deaf: "Animales con gestos (ojos abiertos).",
+              motor: "Desplazamiento lento.",
+              down: "Sonidos fáciles.",
+              tea: "Animal favorito.",
+              tdah: "Buscar rápido.",
+              high_cap: "Sonidos complejos."
+            }
+          },
+          {
+            name: "Lazarillo",
+            description: "Parejas. Uno ciego, otro guía por el hombro/voz.",
+            variant: "Carrera de obstáculos.",
+            material: "Antifaces.",
+            objective: "Confianza y guía.",
+            neae: {
+              blind: "Es el experto.",
+              deaf: "Guía táctil (espalda).",
+              motor: "Guía verbal.",
+              down: "Rol de guiado.",
+              tea: "Guía conocido.",
+              tdah: "Responsabilidad de guiar.",
+              high_cap: "Guiar sin tocar."
+            }
+          }
+        ]
       }
     ]
   },
   {
     category: "3. Iniciación Deportiva",
-    games: [
+    subcategories: [
       {
-        name: "Balón Torre (Invasión)",
-        description: "Pasar el balón a un compañero subido en un banco (torre) para puntuar.",
-        variant: "Dos torres por equipo.",
-        material: "Balón, bancos.",
-        objective: "Desmarque y pase.",
-        neae: {
-          blind: "Torre emite sonido constante.",
-          deaf: "Torre levanta brazos para pedir.",
-          motor: "Torre sentada o zona delimitada en suelo.",
-          down: "Torre con aro grande para recibir.",
-          tea: "Rol fijo de torre o defensor.",
-          tdah: "Rotación rápida de roles.",
-          high_cap: "Arbitraje del juego."
-        }
+        name: "Invasión (Coop-Opo)",
+        games: [
+          {
+            name: "Balón Torre",
+            description: "Pase a compañero en banco.",
+            variant: "Dos torres.",
+            material: "Balón.",
+            objective: "Pase.",
+            neae: {
+              blind: "Sonido.",
+              deaf: "Gestos.",
+              motor: "Torre sentada.",
+              down: "Aro grande.",
+              tea: "Rol fijo.",
+              tdah: "Rotación.",
+              high_cap: "Arbitraje."
+            }
+          },
+          {
+            name: "Los 10 Pases",
+            description: "Mantener posesión 10 pases.",
+            variant: "Con comodín.",
+            material: "Balón.",
+            objective: "Desmarque.",
+            neae: {
+              blind: "Balón sonoro.",
+              deaf: "Petos.",
+              motor: "Comodín.",
+              down: "Menos pases.",
+              tea: "Reglas claras.",
+              tdah: "Intensidad.",
+              high_cap: "Sin repetir."
+            }
+          },
+          {
+            name: "Ultimate (Frisbee)",
+            description: "Pasar disco hasta zona de marca. No se puede correr con disco.",
+            variant: "Con pelota de goma.",
+            material: "Frisbee.",
+            objective: "Lanzamiento y desmarque.",
+            neae: {
+              blind: "Disco de espuma.",
+              deaf: "Visual.",
+              motor: "Zona recepción.",
+              down: "Disco blando.",
+              tea: "Marcaje individual.",
+              tdah: "Juego rápido.",
+              high_cap: "Táctica."
+            }
+          }
+        ]
       },
       {
-        name: "Voleibol con Globos (Red/Muro)",
-        description: "Pasar el globo al campo contrario por encima de una cuerda.",
-        variant: "Usar balón de playa (más rápido).",
-        material: "Cuerda, globos.",
-        objective: "Golpeo y trayectoria.",
-        neae: {
-          blind: "Balón con cascabel (goalball adaptado).",
-          deaf: "Señales visuales de 'fuera/dentro'.",
-          motor: "Red más baja, permitir coger el balón.",
-          down: "Globo (trayectoria lenta).",
-          tea: "Delimitación clara del campo.",
-          tdah: "Partidos cortos a pocos puntos.",
-          high_cap: "Estrategia de colocación."
-        }
+        name: "Red y Muro",
+        games: [
+          {
+            name: "Voleibol con Globos",
+            description: "Pasar globo por encima cuerda.",
+            variant: "Toalla por parejas.",
+            material: "Globos, cuerda.",
+            objective: "Trayectoria.",
+            neae: {
+              blind: "Cascabel.",
+              deaf: "Señal.",
+              motor: "Red baja.",
+              down: "Globo.",
+              tea: "Campo.",
+              tdah: "Puntos cortos.",
+              high_cap: "Colocación."
+            }
+          },
+          {
+            name: "Palas (Muro)",
+            description: "Golpear pelota contra pared alternativamente.",
+            variant: "Con la mano.",
+            material: "Pelotas.",
+            objective: "Coordinación.",
+            neae: {
+              blind: "Pelota sonora.",
+              deaf: "Visual.",
+              motor: "Pelota grande.",
+              down: "Cerca pared.",
+              tea: "Individual.",
+              tdah: "Ritmo.",
+              high_cap: "Dos manos."
+            }
+          },
+          {
+            name: "Indiaca",
+            description: "Golpear indiaca con la mano por encima de red.",
+            variant: "Permitir un bote.",
+            material: "Indiacas.",
+            objective: "Golpeo.",
+            neae: {
+              blind: "Indiaca grande.",
+              deaf: "Visual.",
+              motor: "Sentados.",
+              down: "Permitir agarre.",
+              tea: "Estructurado.",
+              tdah: "Dinámico.",
+              high_cap: "Técnica."
+            }
+          }
+        ]
       },
       {
-        name: "Petanca (Blanco y Diana)",
-        description: "Lanzar bolas para acercarse al boliche.",
-        variant: "Usar saquitos de arena.",
-        material: "Bolas o saquitos.",
-        objective: "Precisión óculo-manual.",
-        neae: {
-          blind: "Referencia sonora en el boliche.",
-          deaf: "Sin adaptación necesaria.",
-          motor: "Canaleta o rampa de lanzamiento.",
-          down: "Distancia reducida.",
-          tea: "Turnos muy estructurados.",
-          tdah: "Lanzamientos seguidos sin mucha espera.",
-          high_cap: "Cálculo de distancias."
-        }
+        name: "Blanco y Diana",
+        games: [
+          {
+            name: "Petanca",
+            description: "Acercar bolas al boliche.",
+            variant: "Saquitos.",
+            material: "Bolas.",
+            objective: "Precisión.",
+            neae: {
+              blind: "Sonido.",
+              deaf: "Visual.",
+              motor: "Canaleta.",
+              down: "Cerca.",
+              tea: "Turnos.",
+              tdah: "Rápido.",
+              high_cap: "Distancia."
+            }
+          },
+          {
+            name: "Bolos",
+            description: "Derribar conos con balón rodando.",
+            variant: "Con el pie.",
+            material: "Conos, balón.",
+            objective: "Puntería.",
+            neae: {
+              blind: "Guía.",
+              deaf: "Visual.",
+              motor: "Rampa.",
+              down: "Pasillo.",
+              tea: "Repetición.",
+              tdah: "Acción.",
+              high_cap: "Efecto."
+            }
+          },
+          {
+            name: "Diana de Suelo",
+            description: "Aros concéntricos con puntuación. Lanzar saquitos.",
+            variant: "Lejos/Cerca.",
+            material: "Aros, saquitos.",
+            objective: "Cálculo fuerza.",
+            neae: {
+              blind: "Relieve.",
+              deaf: "Pizarra puntos.",
+              motor: "Desde silla.",
+              down: "Aros grandes.",
+              tea: "Suma puntos.",
+              tdah: "Competición.",
+              high_cap: "Matemáticas."
+            }
+          }
+        ]
       }
     ]
   },
   {
     category: "4. Expresión Corporal",
-    games: [
+    subcategories: [
       {
-        name: "El Espejo (Desinhibición)",
-        description: "Por parejas, uno hace movimientos y el otro imita como un espejo.",
-        variant: "Espejo deformante (exagerar movimiento).",
-        material: "Música de fondo.",
-        objective: "Comunicación no verbal y esquema corporal.",
-        neae: {
-          blind: "Espejo táctil (tocar para imitar).",
-          deaf: "Ideal, puramente visual.",
-          motor: "Movimientos de tren superior.",
-          down: "Movimientos lentos y sencillos.",
-          tea: "Imitar acciones cotidianas concretas.",
-          tdah: "Cambio de rol rápido.",
-          high_cap: "Crear secuencias complejas."
-        }
+        name: "Desinhibición",
+        games: [
+          {
+            name: "El Espejo",
+            description: "Imitar movimientos pareja.",
+            variant: "Deformante.",
+            material: "Música.",
+            objective: "Esquema corporal.",
+            neae: {
+              blind: "Táctil.",
+              deaf: "Visual.",
+              motor: "Tren superior.",
+              down: "Sencillo.",
+              tea: "Concretos.",
+              tdah: "Rápido.",
+              high_cap: "Complejo."
+            }
+          },
+          {
+            name: "El Escultor",
+            description: "Uno es barro, el otro le mueve para formar estatua.",
+            variant: "Grupos.",
+            material: "Ninguno.",
+            objective: "Contacto y tono.",
+            neae: {
+              blind: "Táctil.",
+              deaf: "Visual.",
+              motor: "Adaptado.",
+              down: "Guiado.",
+              tea: "Aviso contacto.",
+              tdah: "Cambio rol.",
+              high_cap: "Arte."
+            }
+          },
+          {
+            name: "Caminar por Espacios",
+            description: "Ocupar todo el espacio sin chocar. Variar velocidades.",
+            variant: "Como gigantes/enanos.",
+            material: "Música.",
+            objective: "Espacialidad.",
+            neae: {
+              blind: "Pareja.",
+              deaf: "Señal.",
+              motor: "Libre.",
+              down: "Imitación.",
+              tea: "Espacio propio.",
+              tdah: "Correr.",
+              high_cap: "Creatividad."
+            }
+          }
+        ]
       },
       {
-        name: "Las Películas (Dramatización)",
-        description: "Representar un título de película o animal con mímica.",
-        variant: "Por equipos contra reloj.",
-        material: "Tarjetas con títulos.",
-        objective: "Expresividad y desinhibición.",
-        neae: {
-          blind: "Representar sonidos u objetos táctiles.",
-          deaf: "Su punto fuerte (lenguaje gestual).",
-          motor: "Adaptar la acción a sus posibilidades.",
-          down: "Tarjetas con dibujos (pictogramas).",
-          tea: "Temas de su interés específico.",
-          tdah: "Representaciones cortas.",
-          high_cap: "Títulos abstractos o emociones."
-        }
+        name: "Ritmo y Danza",
+        games: [
+          {
+            name: "Sigue el Ritmo",
+            description: "Círculo. Uno hace ritmo con palmas, todos repiten.",
+            variant: "Con pies.",
+            material: "Ninguno.",
+            objective: "Ritmo.",
+            neae: {
+              blind: "Auditivo.",
+              deaf: "Vibración suelo.",
+              motor: "Palmas.",
+              down: "Sencillo.",
+              tea: "Secuencia.",
+              tdah: "Líder.",
+              high_cap: "Polirritmia."
+            }
+          },
+          {
+            name: "Aeróbic Infantil",
+            description: "Pasos sencillos siguiendo al profe.",
+            variant: "Alumnos líderes.",
+            material: "Música.",
+            objective: "Coordinación musical.",
+            neae: {
+              blind: "Verbalizar.",
+              deaf: "Visual.",
+              motor: "Adaptado.",
+              down: "Repetición.",
+              tea: "Rutina.",
+              tdah: "Energía.",
+              high_cap: "Coreografía."
+            }
+          },
+          {
+            name: "Baile de las Cintas",
+            description: "Mover cintas de gimnasia al ritmo.",
+            variant: "Dibujar letras.",
+            material: "Cintas.",
+            objective: "Fluidez.",
+            neae: {
+              blind: "Sonido cinta.",
+              deaf: "Visual.",
+              motor: "Movimiento brazo.",
+              down: "Libre.",
+              tea: "Color.",
+              tdah: "Movimiento amplio.",
+              high_cap: "Figuras."
+            }
+          }
+        ]
+      },
+      {
+        name: "Dramatización",
+        games: [
+          {
+            name: "Las Películas",
+            description: "Mímica de títulos.",
+            variant: "Equipos.",
+            material: "Tarjetas.",
+            objective: "Expresión.",
+            neae: {
+              blind: "Sonidos.",
+              deaf: "Gestos.",
+              motor: "Adaptado.",
+              down: "Dibujos.",
+              tea: "Intereses.",
+              tdah: "Corto.",
+              high_cap: "Abstracto."
+            }
+          },
+          {
+            name: "El Mercado Mágico",
+            description: "Vender un objeto imaginario usando solo gestos.",
+            variant: "Trueque.",
+            material: "Ninguno.",
+            objective: "Comunicación.",
+            neae: {
+              blind: "Describir.",
+              deaf: "Gestos.",
+              motor: "Sentados.",
+              down: "Objeto real.",
+              tea: "Objeto conocido.",
+              tdah: "Rápido.",
+              high_cap: "Persuasión."
+            }
+          },
+          {
+            name: "La Foto",
+            description: "Grupos crean una 'foto' estática de un tema (playa, guerra...).",
+            variant: "La foto cobra vida.",
+            material: "Ninguno.",
+            objective: "Creatividad.",
+            neae: {
+              blind: "Posición.",
+              deaf: "Visual.",
+              motor: "Integrado.",
+              down: "Imitación.",
+              tea: "Rol claro.",
+              tdah: "Cambio.",
+              high_cap: "Director."
+            }
+          }
+        ]
       }
     ]
   },
   {
     category: "5. Condición Física y Salud",
-    games: [
+    subcategories: [
       {
-        name: "Pacman (Resistencia)",
-        description: "Pilla-pilla pero solo se puede correr por las líneas del campo.",
-        variant: "Añadir más 'fantasmas' que pillan.",
-        material: "Líneas del campo.",
-        objective: "Resistencia aeróbica lúdica.",
-        neae: {
-          blind: "Pareja guía obligatoria.",
-          deaf: "Peto distintivo para el Pacman.",
-          motor: "Zona de inmunidad o 'casa'.",
-          down: "Pausas de descanso activas.",
-          tea: "Normas espaciales claras (líneas).",
-          tdah: "Rol de Pacman frecuente.",
-          high_cap: "Estrategia de acorralamiento."
-        }
+        name: "Resistencia",
+        games: [
+          {
+            name: "Pacman",
+            description: "Pilla-pilla por líneas.",
+            variant: "Más fantasmas.",
+            material: "Líneas.",
+            objective: "Aeróbico.",
+            neae: {
+              blind: "Pareja.",
+              deaf: "Peto.",
+              motor: "Casa.",
+              down: "Pausas.",
+              tea: "Normas.",
+              tdah: "Pacman.",
+              high_cap: "Estrategia."
+            }
+          },
+          {
+            name: "Pilla-Pilla Inagotable",
+            description: "Quien es pillado se une a la cadena o se sienta.",
+            variant: "Salvar.",
+            material: "Ninguno.",
+            objective: "Carrera continua.",
+            neae: {
+              blind: "Pareja.",
+              deaf: "Visual.",
+              motor: "Zona.",
+              down: "Descanso.",
+              tea: "Reglas.",
+              tdah: "Correr.",
+              high_cap: "Ayuda."
+            }
+          },
+          {
+            name: "El Tesoro",
+            description: "Correr a buscar objetos escondidos y traerlos a la base.",
+            variant: "Mapa.",
+            material: "Conos, objetos.",
+            objective: "Resistencia.",
+            neae: {
+              blind: "Pareja.",
+              deaf: "Visual.",
+              motor: "Cerca.",
+              down: "Objeto grande.",
+              tea: "Colección.",
+              tdah: "Búsqueda.",
+              high_cap: "Pistas."
+            }
+          }
+        ]
       },
       {
-        name: "Reptar (Fuerza)",
-        description: "Circuito de 'soldaditos' pasando bajo vallas o cuerdas.",
-        variant: "Transportar objetos en la espalda mientras reptan.",
-        material: "Vallas, cuerdas.",
-        objective: "Fuerza de tren superior y core.",
-        neae: {
-          blind: "Superficie segura y guía verbal.",
-          deaf: "Demostración.",
-          motor: "Rodar en vez de reptar si no puede.",
-          down: "Túneles anchos.",
-          tea: "Circuito cerrado y repetitivo.",
-          tdah: "Circuito cronometrado.",
-          high_cap: "Optimizar la técnica de desplazamiento."
-        }
+        name: "Fuerza",
+        games: [
+          {
+            name: "Reptar (Soldaditos)",
+            description: "Pasar bajo cuerdas.",
+            variant: "Transporte.",
+            material: "Cuerdas.",
+            objective: "Tren superior.",
+            neae: {
+              blind: "Seguro.",
+              deaf: "Visual.",
+              motor: "Rodar.",
+              down: "Túnel.",
+              tea: "Circuito.",
+              tdah: "Crono.",
+              high_cap: "Técnica."
+            }
+          },
+          {
+            name: "Soga-Tira",
+            description: "Dos equipos tiran de una cuerda.",
+            variant: "4 equipos en cruz.",
+            material: "Cuerda gruesa.",
+            objective: "Tracción.",
+            neae: {
+              blind: "Agarre.",
+              deaf: "Señal.",
+              motor: "Árbitro.",
+              down: "Fuerza.",
+              tea: "Posición.",
+              tdah: "Energía.",
+              high_cap: "Técnica."
+            }
+          },
+          {
+            name: "Carretillas",
+            description: "Parejas. Uno anda con manos, otro sujeta pies.",
+            variant: "Carreras cortas.",
+            material: "Ninguno.",
+            objective: "Fuerza brazos.",
+            neae: {
+              blind: "Guiado.",
+              deaf: "Visual.",
+              motor: "Sujetar.",
+              down: "Cuidado cuello.",
+              tea: "Pareja fija.",
+              tdah: "Corto.",
+              high_cap: "Coordinación."
+            }
+          }
+        ]
       },
       {
-        name: "El Globo Zen (Flexibilidad/Relax)",
-        description: "Imaginar que somos globos que se hinchan (tensión) y deshinchan (relajación) lentamente.",
-        variant: "Tumbados en el suelo con música suave.",
-        material: "Colchonetas, música.",
-        objective: "Vuelta a la calma y control tónico.",
-        neae: {
-          blind: "Narración descriptiva suave.",
-          deaf: "Imitación visual del profesor.",
-          motor: "Adaptar postura (sentados).",
-          down: "Uso de objeto real (globo) para entender.",
-          tea: "Masaje con pelotas (propiocepción).",
-          tdah: "Relajación progresiva de Jacobson (muy guiada).",
-          high_cap: "Visualización creativa."
-        }
+        name: "Flexibilidad/Relax",
+        games: [
+          {
+            name: "El Globo Zen",
+            description: "Hincharse y deshincharse.",
+            variant: "Música.",
+            material: "Colchonetas.",
+            objective: "Relajación.",
+            neae: {
+              blind: "Narración.",
+              deaf: "Imitación.",
+              motor: "Postura.",
+              down: "Globo real.",
+              tea: "Masaje.",
+              tdah: "Jacobson.",
+              high_cap: "Visualización."
+            }
+          },
+          {
+            name: "Masaje con Pelotas",
+            description: "Por parejas, rodar pelota por espalda compañero.",
+            variant: "Diferentes tamaños.",
+            material: "Pelotas.",
+            objective: "Tono muscular.",
+            neae: {
+              blind: "Sensorial.",
+              deaf: "Visual.",
+              motor: "Receptor.",
+              down: "Suave.",
+              tea: "Aviso.",
+              tdah: "Calma.",
+              high_cap: "Anatomía."
+            }
+          },
+          {
+            name: "Yoga de Animales",
+            description: "Imitar posturas de animales (cobra, gato, perro).",
+            variant: "Cuentos motores.",
+            material: "Colchonetas.",
+            objective: "Estiramiento.",
+            neae: {
+              blind: "Descripción.",
+              deaf: "Tarjeta.",
+              motor: "Adaptada.",
+              down: "Sencilla.",
+              tea: "Pictograma.",
+              tdah: "Cambio.",
+              high_cap: "Perfección."
+            }
+          }
+        ]
       }
     ]
   }
