@@ -6,80 +6,93 @@ export const topics = [
         color: "bg-teal-50",
         borderColor: "border-teal-200",
         textColor: "text-teal-900",
+        content: `
+      <h3>1. Conceptos Clave (Definiciones para memorizar)</h3>
+      <p>Estas definiciones son "carne de examen" para la primera parte.</p>
+      <ul>
+        <li><strong>Educación Física (Definición actual):</strong> «Educación integral a través de las conductas motrices para la transformación personal y social» (Gómez-Rijo, 2021).</li>
+        <li><strong>Conducta Motriz:</strong> «Comportamiento motor en cuanto portador de significación» (Parlebas, 2008). <em>Nota: Se prefiere este término al de "movimiento" porque el movimiento es solo el desplazamiento mecánico, mientras que la conducta implica intencionalidad, emoción y cognición.</em></li>
+        <li><strong>Psicomotricidad:</strong> Educación dirigida no solo al cuerpo como entidad biológica, sino psicosomática, donde las estructuras motrices se desarrollan en interacción entre el yo y el medio.</li>
+      </ul>
+
+      <h3>2. Historia de la Educación Física</h3>
+      <p>Evolución cronológica de la actividad física. Suele caer como preguntas de relacionar etapas o características.</p>
+      <h4>2.1. Eras Gimnásticas</h4>
+      <ul>
+        <li><strong>Era Gimnástica Antigua (400 a.C. - s. XVIII):</strong> Visión globalizante. Todo ejercicio era "educación física".</li>
+        <li><strong>Era Gimnástica Moderna (desde s. XVIII):</strong> Nacimiento de las Escuelas y diferenciación (Deporte, Gimnasia, Juego).</li>
+      </ul>
+      <h4>2.2. Etapas Históricas Relevantes</h4>
+      <ul>
+        <li><strong>Prehistoria:</strong> Actividad física utilitaria y de supervivencia (caza, pesca, lucha).</li>
+        <li><strong>Grecia (Cuna de la EF):</strong> Origen de la palabra "gimnasia" (desnudo). Diferenciación clave: Gimnasia (educativa) vs. Agonística (competitiva). Platón: Equilibrio cuerpo y alma. Juegos Olímpicos: Honor a Zeus, celebrados cada 4 años en Olimpia.</li>
+        <li><strong>Roma:</strong> Enfoque militar y de espectáculo (luchas, preparación para la guerra).</li>
+        <li><strong>Edad Media:</strong> Retroceso. Influencia de la Iglesia (ascetismo, rechazo al cuerpo). Solo se mantiene en la caballería (torneos, justas).</li>
+        <li><strong>Renacimiento:</strong> Resurgir de los clásicos (Grecia/Roma). Interés por la belleza y dominio del cuerpo.</li>
+        <li><strong>Siglo XVIII (Ilustración):</strong> Rousseau introduce la educación natural. El ejercicio forma la inteligencia y el carácter.</li>
+      </ul>
+
+      <h3>3. Las Grandes Escuelas Gimnásticas (Siglo XIX)</h3>
+      <p>¡IMPORTANTE! Este apartado es fundamental para diferenciar enfoques.</p>
+      <ul>
+        <li><strong>Escuela Sueca (P.H. Ling):</strong> Analítica, buscaba la salud corporal, corrección de defectos físicos. Ejercicios construidos, estáticos y con orden rígido.</li>
+        <li><strong>Escuela Alemana (F.L. Jahn):</strong> Patriótica (unir al pueblo alemán tras guerras). Uso de aparatos, esfuerzo físico, riesgo y dificultad. Dio origen a la gimnasia artística.</li>
+        <li><strong>Escuela Británica (Thomas Arnold):</strong> Introducción del Deporte en la escuela. Fair Play, reglas, competición regulada y responsabilidad social (clubes).</li>
+        <li><strong>Escuela Francesa (Amorós / Hébert):</strong> Utilitaria (preparar para la vida). Movimiento natural, marcha, carrera, lanzar. Antecedente del entrenamiento militar y natural.</li>
+      </ul>
+
+      <h3>4. Evolución en España</h3>
+      <ul>
+        <li><strong>Siglo XIX:</strong> Retraso respecto a Europa. Amorós fue figura clave pero desarrolló su obra en Francia.</li>
+        <li><strong>Guerra Civil y Franquismo:</strong> La EF pasa a ser controlada por la Falange (Sección Femenina y Frente de Juventudes). Enfoque militar e higienista, separación de sexos.</li>
+        <li><strong>Constitución 1978:</strong> Reconoce el deporte y la EF como competencia de los poderes públicos.</li>
+        <li><strong>LOGSE (1990):</strong> Hito clave. La EF se hace obligatoria en todos los niveles y entra en la Universidad con rango de licenciatura/especialidad.</li>
+      </ul>
+
+      <h3>5. Corrientes y Tendencias Actuales</h3>
+      <ul>
+        <li><strong>5.1. Educación Deportiva:</strong> Diferencia entre Deporte (rendimiento) y EF (educativa). Busca educar a través del deporte, no solo crear atletas.</li>
+        <li><strong>5.2. Psicomotricidad:</strong> Enfoque psicosomático (cuerpo-mente). Tres líneas:
+          <ul>
+            <li>Método Psicocinético (Jean Le Boulch): Movimiento como medio pedagógico general.</li>
+            <li>Educación Corporal (Picq y Vayer): Reeducación para niños con problemas de comportamiento.</li>
+            <li>Educación Vivenciada (Lapierre y Aucouturier): El niño participa en su propia educación desde la vivencia.</li>
+          </ul>
+        </li>
+        <li><strong>5.3. Expresión Corporal:</strong> Busca el equilibrio psicofísico y la comunicación no verbal. Contenidos: Danza, mimo, juego dramático.</li>
+        <li><strong>5.4. Praxiología Motriz (Parlebas):</strong> Critica la psicomotricidad por individualista. Propone la Sociomotricidad: El movimiento siempre se da en relación con otros y el entorno (incertidumbre).</li>
+      </ul>
+
+      <h3>6. La Función Educativa (Modelo de Arnold)</h3>
+      <p>OJO EXAMEN: Justificación teórica potente.</p>
+      <ul>
+        <li><strong>Educación "ACERCA" del movimiento:</strong> (Dimensión Teórica). Aprender normas, fisiología, historia.</li>
+        <li><strong>Educación "EN" el movimiento:</strong> (Dimensión Práctica). Valor de practicar la actividad en sí misma. Disfrute.</li>
+        <li><strong>Educación "A TRAVÉS" del movimiento:</strong> (Dimensión Instrumental). Usar la EF para fines externos: salud, moral, socialización.</li>
+      </ul>
+    `,
         flashcards: [
-            {
-                front: "Educación Física (Definición actual)",
-                back: "«Educación integral a través de las conductas motrices para la transformación personal y social» (Gómez-Rijo, 2021)."
-            },
-            {
-                front: "Conducta Motriz (Parlebas, 2008)",
-                back: "«Comportamiento motor en cuanto portador de significación». Implica intencionalidad, emoción y cognición, a diferencia del simple movimiento mecánico."
-            },
-            {
-                front: "Psicomotricidad",
-                back: "Educación dirigida al cuerpo como entidad psicosomática, donde las estructuras motrices se desarrollan en interacción entre el yo y el medio."
-            },
-            {
-                front: "Escuela Sueca (P.H. Ling)",
-                back: "Analítica, buscaba la salud corporal y corrección de defectos. Ejercicios construidos, estáticos y con orden rígido."
-            },
-            {
-                front: "Escuela Alemana (F.L. Jahn)",
-                back: "Patriótica, uso de aparatos, esfuerzo físico, riesgo y dificultad. Origen de la gimnasia artística."
-            },
-            {
-                front: "Escuela Británica (Thomas Arnold)",
-                back: "Introducción del Deporte, Fair Play, reglas, competición regulada y responsabilidad social."
-            },
-            {
-                front: "Escuela Francesa (Amorós / Hébert)",
-                back: "Utilitaria (preparar para la vida). Movimiento natural, marcha, carrera. Antecedente del entrenamiento militar."
-            },
-            {
-                front: "Modelo de Arnold (3 Dimensiones)",
-                back: "1. Educación ACERCA del movimiento (Teórica). 2. Educación EN el movimiento (Práctica/Disfrute). 3. Educación A TRAVÉS del movimiento (Instrumental/Valores)."
-            },
-            {
-                front: "Sociomotricidad (Parlebas)",
-                back: "El movimiento siempre se da en relación con otros (compañeros/adversarios) y el entorno (incertidumbre)."
-            }
+            { front: "Educación Física (Definición actual)", back: "«Educación integral a través de las conductas motrices para la transformación personal y social» (Gómez-Rijo, 2021)." },
+            { front: "Conducta Motriz (Parlebas, 2008)", back: "«Comportamiento motor en cuanto portador de significación». Implica intencionalidad, emoción y cognición." },
+            { front: "Psicomotricidad", back: "Educación dirigida al cuerpo como entidad psicosomática, interacción entre el yo y el medio." },
+            { front: "Escuela Sueca (Ling)", back: "Analítica, salud corporal, corrección. Ejercicios construidos, estáticos, orden rígido." },
+            { front: "Escuela Alemana (Jahn)", back: "Patriótica, aparatos, esfuerzo, riesgo. Origen gimnasia artística." },
+            { front: "Escuela Británica (Arnold)", back: "Deporte, Fair Play, reglas, competición regulada." },
+            { front: "Escuela Francesa (Amorós/Hébert)", back: "Utilitaria. Movimiento natural, marcha, carrera. Entrenamiento militar." },
+            { front: "Modelo de Arnold (3 Dimensiones)", back: "1. ACERCA (Teórica). 2. EN (Práctica). 3. A TRAVÉS (Instrumental/Valores)." },
+            { front: "Sociomotricidad (Parlebas)", back: "Movimiento en relación con otros y el entorno (incertidumbre)." }
         ],
         quiz: [
-            {
-                question: "¿Qué autor define la Conducta Motriz como 'comportamiento motor portador de significación'?",
-                options: ["Gómez-Rijo", "Parlebas", "Arnold", "Ling"],
-                correct: 1,
-                explanation: "Parlebas (2008) acuñó el término para diferenciarlo del simple movimiento mecánico."
-            },
-            {
-                question: "¿Qué Escuela Gimnástica introdujo el Fair Play y el deporte en la escuela?",
-                options: ["Escuela Sueca", "Escuela Alemana", "Escuela Británica", "Escuela Francesa"],
-                correct: 2,
-                explanation: "Thomas Arnold, de la Escuela Británica, introdujo el deporte y sus valores."
-            },
-            {
-                question: "Según el modelo de Arnold, ¿a qué dimensión corresponde la 'Educación A TRAVÉS del movimiento'?",
-                options: ["Dimensión Teórica", "Dimensión Práctica", "Dimensión Instrumental", "Dimensión Competitiva"],
-                correct: 2,
-                explanation: "Es la dimensión instrumental: usar la EF para fines externos como salud o socialización."
-            },
-            {
-                question: "¿Qué hito legal hizo obligatoria la EF en todos los niveles en España?",
-                options: ["Constitución 1978", "Ley General 1970", "LOGSE (1990)", "LOMLOE (2020)"],
-                correct: 2,
-                explanation: "La LOGSE (1990) fue el hito clave que la hizo obligatoria y le dio rango universitario."
-            },
-            {
-                question: "¿Qué caracteriza a la Escuela Sueca?",
-                options: ["Movimiento natural", "Riesgo y aparatos", "Analítica y corrección postural", "Deporte reglado"],
-                correct: 2,
-                explanation: "La Escuela Sueca de Ling era analítica, estática y buscaba la corrección física."
-            }
+            { question: "¿Qué autor define la Conducta Motriz como 'comportamiento motor portador de significación'?", options: ["Gómez-Rijo", "Parlebas", "Arnold", "Ling"], correct: 1, explanation: "Parlebas (2008) acuñó el término." },
+            { question: "¿Qué Escuela introdujo el Fair Play?", options: ["Sueca", "Alemana", "Británica", "Francesa"], correct: 2, explanation: "Thomas Arnold, Escuela Británica." },
+            { question: "Según Arnold, ¿qué es la Educación A TRAVÉS del movimiento?", options: ["Teórica", "Práctica", "Instrumental", "Competitiva"], correct: 2, explanation: "Usar la EF para fines externos (salud, valores)." },
+            { question: "¿Qué ley hizo obligatoria la EF en España?", options: ["Constitución 1978", "Ley 1970", "LOGSE (1990)", "LOMLOE"], correct: 2, explanation: "La LOGSE (1990)." },
+            { question: "¿Qué caracteriza a la Escuela Sueca?", options: ["Movimiento natural", "Riesgo", "Analítica y corrección", "Deporte"], correct: 2, explanation: "Analítica, estática y correctiva." }
         ],
         practicalTips: [
-            "Justificación Teórica: La sesión no busca 'adiestrar' (mecanicista), sino desarrollar la Conducta Motriz (Parlebas).",
-            "Modelo de Arnold: Mencionar que trabajamos 'EN' el movimiento (práctica), 'ACERCA' (reglas/salud) y 'A TRAVÉS' (valores).",
-            "Alfabetización Física: El objetivo final es crear cultura motriz para la salud futura."
+            "Justificación: No 'adiestrar', sino desarrollar Conducta Motriz (Parlebas).",
+            "Modelo Arnold: Trabajamos 'EN' (práctica), 'ACERCA' (reglas) y 'A TRAVÉS' (valores).",
+            "Alfabetización Física: Objetivo final es cultura motriz para la salud."
         ]
     },
     {
@@ -88,72 +101,55 @@ export const topics = [
         color: "bg-purple-50",
         borderColor: "border-purple-200",
         textColor: "text-purple-900",
+        content: `
+      <h3>1. Definiciones Curriculares (LOMLOE)</h3>
+      <ul>
+        <li><strong>Currículo:</strong> «Conjunto de objetivos, competencias, contenidos, métodos pedagógicos y criterios de evaluación» (Art. 6 LOMLOE).</li>
+        <li><strong>Objetivos:</strong> Logros esperados al finalizar la etapa, vinculados a competencias clave.</li>
+        <li><strong>Competencias Clave:</strong> Desempeños imprescindibles para el éxito (UE).</li>
+        <li><strong>Competencias Específicas:</strong> Puente entre Perfil de Salida y Saberes Básicos. Desempeños en situaciones del área.</li>
+        <li><strong>Criterios de Evaluación:</strong> Referentes de niveles de desempeño.</li>
+        <li><strong>Saberes Básicos:</strong> Conocimientos, destrezas y actitudes.</li>
+        <li><strong>Situaciones de Aprendizaje (SdA):</strong> Actividades que implican despliegue de competencias.</li>
+      </ul>
+
+      <h3>2. Niveles de Concreción Curricular</h3>
+      <ul>
+        <li><strong>1º Nivel (Gobierno):</strong> LOMLOE, Reales Decretos.</li>
+        <li><strong>2º Nivel (Centro):</strong> Proyecto Educativo (PE), Programación Didáctica (PD).</li>
+        <li><strong>3º Nivel (Aula):</strong> Situaciones de Aprendizaje (SdA).</li>
+        <li><strong>4º Nivel (Alumno):</strong> Adaptaciones y DUA.</li>
+      </ul>
+
+      <h3>3. El Currículo Específico de EF</h3>
+      <h4>3.2. Las 5 Competencias Específicas (¡Memorizar!)</h4>
+      <ol>
+        <li>Adoptar un estilo de vida activo y saludable.</li>
+        <li>Adaptar elementos del esquema corporal y capacidades para resolver problemas motores.</li>
+        <li>Desarrollar procesos de autorregulación emocional e interacción social.</li>
+        <li>Reconocer y valorar manifestaciones de la cultura motriz.</li>
+        <li>Valorar el entorno e interactuar de manera sostenible.</li>
+      </ol>
+
+      <h3>5. Diseño de Proyectos: La Situación de Aprendizaje (SdA)</h3>
+      <p>Estructura básica: Título, Justificación, Objetivos, Reto Final, Concreción Curricular, Metodología, Secuenciación (Movilizar, Activar, Explorar, Estructurar, Aplicar, Concluir), Evaluación.</p>
+    `,
         flashcards: [
-            {
-                front: "Currículo (LOMLOE)",
-                back: "Conjunto de objetivos, competencias, contenidos, métodos pedagógicos y criterios de evaluación."
-            },
-            {
-                front: "Competencias Clave",
-                back: "Desempeños imprescindibles para progresar con éxito. Adaptación española de las recomendaciones de la UE."
-            },
-            {
-                front: "Competencias Específicas",
-                back: "Puente entre el Perfil de Salida (competencias clave) y los Saberes Básicos. Desempeños en situaciones del área."
-            },
-            {
-                front: "Saberes Básicos",
-                back: "Conocimientos, destrezas y actitudes necesarios para adquirir las competencias específicas."
-            },
-            {
-                front: "Situaciones de Aprendizaje (SdA)",
-                back: "Situaciones y actividades que implican el despliegue de competencias clave y específicas."
-            },
-            {
-                front: "Niveles de Concreción Curricular",
-                back: "1º: Gobierno (Leyes/RD). 2º: Centro (PE/PD). 3º: Aula (SdA). 4º: Alumno (Adaptaciones/DUA)."
-            },
-            {
-                front: "Competencia Motriz",
-                back: "Capacita para el desarrollo de la motricidad humana en dimensiones biológica, afectiva, cognitiva y social."
-            }
+            { front: "Currículo (LOMLOE)", back: "Conjunto de objetivos, competencias, contenidos, métodos y criterios de evaluación." },
+            { front: "Competencias Específicas", back: "Puente entre Perfil de Salida y Saberes Básicos." },
+            { front: "Niveles de Concreción", back: "1º Gobierno, 2º Centro, 3º Aula, 4º Alumno." },
+            { front: "Competencia Específica 2 (EF)", back: "Adaptar esquema corporal y capacidades para resolver problemas motores." },
+            { front: "Secuenciación SdA", back: "Movilizar -> Activar -> Explorar -> Estructurar -> Aplicar -> Concluir." }
         ],
         quiz: [
-            {
-                question: "¿Qué elemento curricular conecta el Perfil de Salida con los Saberes Básicos?",
-                options: ["Objetivos", "Criterios de Evaluación", "Competencias Específicas", "Situaciones de Aprendizaje"],
-                correct: 2,
-                explanation: "Las Competencias Específicas son el puente entre las Clave y los Saberes."
-            },
-            {
-                question: "¿A qué nivel de concreción curricular corresponde la Programación Didáctica?",
-                options: ["Primer Nivel", "Segundo Nivel", "Tercer Nivel", "Cuarto Nivel"],
-                correct: 1,
-                explanation: "El Segundo Nivel corresponde al Centro Educativo (PE y PD)."
-            },
-            {
-                question: "¿Cuál NO es una de las 5 Competencias Específicas de EF?",
-                options: ["Estilo de vida activo", "Resolución de problemas motores", "Rendimiento deportivo máximo", "Autorregulación emocional"],
-                correct: 2,
-                explanation: "El rendimiento máximo no es una competencia escolar; la EF es educativa."
-            },
-            {
-                question: "¿Qué define a una Situación de Aprendizaje?",
-                options: ["Una lista de temas", "Un examen final", "Actividades que implican despliegue de competencias", "Un recreo libre"],
-                correct: 2,
-                explanation: "Son situaciones que contribuyen al desarrollo competencial mediante la acción."
-            },
-            {
-                question: "¿Qué enfoque organiza el currículo interrelacionando contenidos para evitar la fragmentación?",
-                options: ["Globalización", "Interdisciplinariedad", "Especialización", "Competición"],
-                correct: 1,
-                explanation: "La Interdisciplinariedad es el modelo pedagógico para conectar disciplinas."
-            }
+            { question: "¿Qué conecta el Perfil de Salida con los Saberes Básicos?", options: ["Objetivos", "Criterios", "Competencias Específicas", "SdA"], correct: 2, explanation: "Las Competencias Específicas." },
+            { question: "¿Nivel de concreción de la Programación Didáctica?", options: ["1º", "2º", "3º", "4º"], correct: 1, explanation: "2º Nivel (Centro)." },
+            { question: "¿Qué NO es una Competencia Específica de EF?", options: ["Vida activa", "Resolución problemas", "Rendimiento máximo", "Autorregulación"], correct: 2, explanation: "Rendimiento máximo." }
         ],
         practicalTips: [
-            "Estructura SdA: Título, Justificación, Objetivos (Verbo+Contenido+Criterio), Reto Final.",
-            "Secuenciación: Movilizar -> Activar -> Explorar -> Estructurar -> Aplicar -> Concluir.",
-            "Objetivos Motores: Usar clasificación de Troya (Situar móvil, Traslaciones, Combatir, Reproducir, Interoceptivas, Crear)."
+            "Estructura SdA: Título, Justificación, Objetivos, Reto.",
+            "Secuenciación: Movilizar -> ... -> Concluir.",
+            "Objetivos Motores (Troya): Situar móvil, Traslaciones, Combatir, Reproducir, Interoceptivas, Crear."
         ]
     },
     {
@@ -162,70 +158,62 @@ export const topics = [
         color: "bg-indigo-50",
         borderColor: "border-indigo-200",
         textColor: "text-indigo-900",
+        content: `
+      <h3>1. Glosario (UNESCO 2017)</h3>
+      <ul>
+        <li><strong>Diversidad:</strong> Diferencias (raza, capacidad, cultura, etc.).</li>
+        <li><strong>Inclusión:</strong> Proceso de superar obstáculos para presencia, participación y logros.</li>
+        <li><strong>Equidad:</strong> Justicia. Dar a cada uno lo que necesita (diferente de igualdad).</li>
+        <li><strong>Educación Inclusiva:</strong> Fortalecer el sistema para llegar a todos.</li>
+      </ul>
+
+      <h3>2. Paradigma Educativo</h3>
+      <p>Del "Déficit" al "Éxito Competencial". Zona de Desarrollo Próximo (Vygotski).</p>
+
+      <h3>3. Estrategias de Intervención</h3>
+      <h4>3.1. Criterios (Arráez)</h4>
+      <ul>
+        <li><strong>Igualdad:</strong> Tarea abierta, sin cambios.</li>
+        <li><strong>Ayuda/Apoyo:</strong> Tarea igual + info extra.</li>
+        <li><strong>Modificación:</strong> Cambio de estructura (normas, material).</li>
+      </ul>
+
+      <h4>3.3. Diseño Universal para el Aprendizaje (DUA)</h4>
+      <p><strong>Definición (Moreira, 2024):</strong> Modelo de enseñanza que tiene en cuenta la diversidad del alumnado y cuyo objetivo es lograr una inclusión efectiva, minimizando barreras físicas, sensoriales, cognitivas y culturales. Favorece la igualdad de oportunidades.</p>
+      <p><strong>Definición (Alba-Pastor et al., 2012):</strong> Enfoque didáctico que pretende aplicar los principios del diseño universal al diseño del currículo.</p>
+      <p><strong>3 Principios:</strong></p>
+      <ol>
+        <li>Múltiples formas de Implicación (Compromiso): El porqué.</li>
+        <li>Múltiples formas de Representación: El qué.</li>
+        <li>Múltiples formas de Acción y Expresión: El cómo.</li>
+      </ol>
+
+      <h3>4. Guía Práctica NEAE</h3>
+      <ul>
+        <li><strong>Down:</strong> Refuerzo positivo, imitación, explicaciones lentas.</li>
+        <li><strong>TEA:</strong> Anticipación, pictogramas, rutinas.</li>
+        <li><strong>TDAH:</strong> Tareas cortas, roles activos, relajación.</li>
+        <li><strong>Altas Capacidades:</strong> Retos, liderazgo.</li>
+        <li><strong>Dificultades Motoras:</strong> Eliminar barreras, material adaptado, empatía.</li>
+      </ul>
+    `,
         flashcards: [
-            {
-                front: "Equidad vs Igualdad",
-                back: "Igualdad es dar a todos lo mismo. Equidad es dar a cada uno lo que necesita para llegar al mismo objetivo."
-            },
-            {
-                front: "Inclusión (UNESCO)",
-                back: "Proceso de ayuda a superar los obstáculos que limitan la presencia, participación y logros."
-            },
-            {
-                front: "Paradigma del Éxito Competencial",
-                back: "Centrado en fortalezas y potencialidades, abandonando el 'paradigma del déficit'."
-            },
-            {
-                front: "Criterios de Intervención (Arráez)",
-                back: "1. Igualdad (sin cambios). 2. Ayuda/Apoyo (info extra). 3. Modificación (cambio de estructura)."
-            },
-            {
-                front: "DUA (Diseño Universal para el Aprendizaje)",
-                back: "Minimizar barreras desde el inicio. 3 Principios: Compromiso (por qué), Representación (qué), Acción/Expresión (cómo)."
-            },
-            {
-                front: "Zona de Desarrollo Próximo (Vygotski)",
-                back: "Distancia entre lo que el alumno hace solo (nivel real) y lo que hace con ayuda (potencial)."
-            }
+            { front: "Equidad vs Igualdad", back: "Igualdad = dar lo mismo. Equidad = dar lo que necesita cada uno." },
+            { front: "Inclusión (UNESCO)", back: "Superar obstáculos para presencia, participación y logros." },
+            { front: "Criterios Arráez", back: "1. Igualdad. 2. Ayuda/Apoyo. 3. Modificación." },
+            { front: "DUA (Moreira, 2024)", back: "Modelo que minimiza barreras físicas, sensoriales, cognitivas y culturales para lograr inclusión efectiva." },
+            { front: "Principios DUA", back: "1. Implicación (por qué). 2. Representación (qué). 3. Acción/Expresión (cómo)." }
         ],
         quiz: [
-            {
-                question: "¿Qué principio del DUA se refiere al 'por qué' del aprendizaje (motivación)?",
-                options: ["Múltiples formas de Representación", "Múltiples formas de Acción", "Múltiples formas de Implicación/Compromiso", "Ninguna es correcta"],
-                correct: 2,
-                explanation: "La Implicación o Compromiso busca captar el interés y motivar."
-            },
-            {
-                question: "Si modificamos las normas o el material de una tarea para un alumno, ¿qué criterio de intervención usamos según Arráez?",
-                options: ["Igualdad", "Ayuda", "Modificación", "Exclusión"],
-                correct: 2,
-                explanation: "La Modificación implica cambiar la estructura de la tarea."
-            },
-            {
-                question: "¿Cuál es la adaptación clave para un alumno con TEA?",
-                options: ["Gritos fuertes", "Anticipación y pictogramas", "Contacto físico constante", "Cambios sorpresa"],
-                correct: 1,
-                explanation: "La anticipación y el apoyo visual (pictogramas) son fundamentales para TEA."
-            },
-            {
-                question: "¿Qué caracteriza al alumnado con TDAH en la intervención didáctica?",
-                options: ["Necesitan tareas largas", "Tareas cortas y éxito rápido", "Estar quietos mucho tiempo", "No darles responsabilidades"],
-                correct: 1,
-                explanation: "Requieren tareas cortas, éxito rápido y roles activos para canalizar energía."
-            },
-            {
-                question: "¿Qué es la Equidad?",
-                options: ["Dar a todos lo mismo", "Dar a cada uno lo que necesita", "Separar a los alumnos", "Ignorar las diferencias"],
-                correct: 1,
-                explanation: "Equidad es justicia: dar los recursos necesarios según la necesidad individual."
-            }
+            { question: "¿Qué principio DUA es la motivación?", options: ["Representación", "Acción", "Implicación", "Ninguno"], correct: 2, explanation: "Implicación (Compromiso)." },
+            { question: "Si cambio las normas, ¿qué criterio es?", options: ["Igualdad", "Ayuda", "Modificación", "Exclusión"], correct: 2, explanation: "Modificación." },
+            { question: "Adaptación clave TEA", options: ["Gritos", "Anticipación/Pictogramas", "Contacto físico", "Sorpresas"], correct: 1, explanation: "Anticipación y visuales." }
         ],
         practicalTips: [
-            "Síndrome de Down: Refuerzo positivo, imitación, explicaciones lentas.",
-            "TEA: Anticipación, rutinas, pictogramas, evitar contacto forzado.",
-            "TDAH: Tareas cortas, roles activos (ayudante), relajación.",
-            "Altas Capacidades: Retos intelectuales, roles de liderazgo.",
-            "Dificultades Motoras: Eliminar barreras, material adaptado (espuma), empatía (vóley sentado)."
+            "Down: Imitación, refuerzo.",
+            "TEA: Anticipación, pictogramas.",
+            "TDAH: Tareas cortas, roles activos.",
+            "Motoras: Material adaptado, eliminación barreras."
         ]
     },
     {
@@ -234,69 +222,46 @@ export const topics = [
         color: "bg-orange-50",
         borderColor: "border-orange-200",
         textColor: "text-orange-900",
+        content: `
+      <h3>Bloque 1: Habilidades Motrices</h3>
+      <ul>
+        <li><strong>Habilidad Motriz:</strong> Acción observable (correr, saltar).</li>
+        <li><strong>Conductas Perceptivo-Motrices:</strong> Corporalidad, Espacialidad, Temporalidad.</li>
+        <li><strong>Coordinaciones:</strong> Dinámica General (Locomotrices: marcha, carrera, salto / No Locomotrices: giros) y Óculo-Segmentaria (Manipulativas).</li>
+      </ul>
+
+      <h3>Bloque 2: Juego Motor</h3>
+      <p><strong>Significación Motriz (Parlebas):</strong> Intención, Decisión, Ajuste. Características: Placer, Reglas, Incertidumbre, Improductividad.</p>
+
+      <h3>Bloque 3: Iniciación Deportiva</h3>
+      <p><strong>Clasificación CAI (Incertidumbre):</strong> Compañero (C), Adversario (A), Entorno (I).</p>
+      <ul>
+        <li>Psicomotor: Solitario (Gimnasia).</li>
+        <li>Sociomotor Coop: Patinaje parejas.</li>
+        <li>Sociomotor Oposición: Judo, Tenis.</li>
+        <li>Sociomotor Coop-Opo: Fútbol, Basket.</li>
+      </ul>
+      <p><strong>Modelos:</strong> Técnico (Tradicional) vs Comprensivo (Táctica primero).</p>
+
+      <h3>Bloque 5: Salud</h3>
+      <p>Primaria = Salud, no rendimiento. FC niños 6-8 años: 100-115 ppm.</p>
+    `,
         flashcards: [
-            {
-                front: "Habilidad Motriz",
-                back: "Acción observable referida a la acción (correr, saltar). Es el grado de competencia."
-            },
-            {
-                front: "Conductas Perceptivo-Motrices",
-                back: "Integran a la persona con el entorno: Corporalidad, Espacialidad y Temporalidad."
-            },
-            {
-                front: "Significación Motriz (Parlebas)",
-                back: "Implica Intención, Decisión y Ajuste motor. Diferencia el juego motor del simple movimiento."
-            },
-            {
-                front: "Clasificación CAI (Juegos Deportivos)",
-                back: "Basada en la Incertidumbre: Compañero (C), Adversario (A), Entorno (I)."
-            },
-            {
-                front: "Modelo Comprensivo",
-                back: "Enseña primero la táctica (juego simplificado) y luego la técnica. Fomenta la cognición."
-            },
-            {
-                front: "Frecuencia cardíaca niños 6-8 años",
-                back: "100-115 puls/min (Referencia de seguridad)."
-            }
+            { front: "Habilidad Motriz", back: "Acción observable (correr, saltar)." },
+            { front: "Significación Motriz", back: "Intención, Decisión, Ajuste." },
+            { front: "Clasificación CAI", back: "Incertidumbre: Compañero, Adversario, Entorno." },
+            { front: "Modelo Comprensivo", back: "Primero táctica (juego), luego técnica." },
+            { front: "FC niños 6-8 años", back: "100-115 ppm." }
         ],
         quiz: [
-            {
-                question: "¿Dónde reside la incertidumbre en un deporte Sociomotor de Oposición (ej: Judo)?",
-                options: ["En el medio", "En el compañero", "En el adversario", "No hay incertidumbre"],
-                correct: 2,
-                explanation: "En la oposición, la incertidumbre viene de las acciones del rival."
-            },
-            {
-                question: "¿Qué tipo de resistencia es la saludable para Primaria?",
-                options: ["Anaeróbica láctica", "Anaeróbica aláctica", "Aeróbica", "Ninguna"],
-                correct: 2,
-                explanation: "La aeróbica (baja/media intensidad) es la adecuada. La anaeróbica está contraindicada sistemáticamente."
-            },
-            {
-                question: "¿Qué modelo de enseñanza deportiva prioriza la táctica sobre la técnica?",
-                options: ["Modelo Técnico", "Modelo Comprensivo", "Modelo Militar", "Modelo Analítico"],
-                correct: 1,
-                explanation: "El Modelo Comprensivo empieza por el juego y la comprensión táctica."
-            },
-            {
-                question: "¿Cuál es una habilidad locomotriz?",
-                options: ["Giro", "Lanzamiento", "Carrera", "Equilibrio"],
-                correct: 2,
-                explanation: "La carrera implica desplazamiento, por tanto es locomotriz."
-            },
-            {
-                question: "¿Qué define al Juego Motor según Parlebas?",
-                options: ["Reglas estrictas", "Significación motriz", "Competición federada", "Uso de material"],
-                correct: 1,
-                explanation: "La significación motriz (intención, decisión) es lo que le da carácter de juego motor."
-            }
+            { question: "¿Incertidumbre en Judo?", options: ["Medio", "Compañero", "Adversario", "Ninguna"], correct: 2, explanation: "Oposición (Adversario)." },
+            { question: "¿Resistencia saludable Primaria?", options: ["Anaeróbica", "Aeróbica", "Láctica", "Ninguna"], correct: 1, explanation: "Aeróbica." },
+            { question: "¿Modelo que prioriza táctica?", options: ["Técnico", "Comprensivo", "Militar", "Analítico"], correct: 1, explanation: "Comprensivo." }
         ],
         practicalTips: [
-            "Habilidades: Definir tipo (ej: coordinación óculo-manual).",
-            "Deportes: Usar Modelo Comprensivo (juegos modificados, 3x3), evitar filas.",
-            "Condición Física: NO hablar de 'entrenamiento'. Usar 'Juegos de persecución' (resistencia) o 'trepa' (fuerza).",
-            "Expresión: Empezar con desinhibición (ocupar espacios) antes de actuar."
+            "Habilidades: Definir tipo.",
+            "Deportes: Modelo Comprensivo (3x3).",
+            "Salud: Juegos persecución, no 'entreno'."
         ]
     },
     {
@@ -305,144 +270,155 @@ export const topics = [
         color: "bg-pink-50",
         borderColor: "border-pink-200",
         textColor: "text-pink-900",
+        content: `
+      <h3>1. Conceptos</h3>
+      <ul>
+        <li><strong>Medir:</strong> Cuantificar (objetivo).</li>
+        <li><strong>Evaluar:</strong> Juicio de valor para tomar decisiones (cualitativo/formativo).</li>
+        <li><strong>Calificar:</strong> Asignar nota (administrativo).</li>
+      </ul>
+
+      <h3>2. Tipos</h3>
+      <ul>
+        <li><strong>Momento:</strong> Inicial (Diagnóstica), Formativa (Procesual), Sumativa (Final).</li>
+        <li><strong>Agente:</strong> Heteroevaluación (Profe), Coevaluación (Compartida), Autoevaluación (Alumno), Recíproca (Entre iguales).</li>
+      </ul>
+
+      <h3>3. Instrumentos</h3>
+      <ul>
+        <li><strong>Lista de Control:</strong> Sí/No.</li>
+        <li><strong>Escala:</strong> Numérica o Cualitativa.</li>
+        <li><strong>Rúbrica:</strong> Matriz con niveles de desempeño descritos.</li>
+      </ul>
+    `,
         flashcards: [
-            {
-                front: "Diferencia Medir vs Evaluar",
-                back: "Medir es cuantificar (objetivo). Evaluar es emitir un juicio de valor para tomar decisiones (cualitativo)."
-            },
-            {
-                front: "Evaluación Formativa",
-                back: "Se realiza DURANTE el proceso. Su fin es educar, motivar y corregir errores."
-            },
-            {
-                front: "Evaluación Compartida",
-                back: "Diálogo entre profesor y alumno para consensuar la valoración."
-            },
-            {
-                front: "Diferencia Instrumento vs Técnica",
-                back: "Técnica es la estrategia (observación). Instrumento es la herramienta física (lista de control, rúbrica)."
-            },
-            {
-                front: "Rúbrica",
-                back: "Matriz que cruza criterios con niveles de desempeño descritos detalladamente. Ideal para competencias."
-            },
-            {
-                front: "Triangulación de Evidencias",
-                back: "Usar Respuestas (saber), Productos (saber hacer/crear) y Desempeños (saber hacer/actitud)."
-            }
+            { front: "Medir vs Evaluar", back: "Medir = cuantificar. Evaluar = juicio de valor para mejora." },
+            { front: "Evaluación Formativa", back: "Durante el proceso. Fin: educar y corregir." },
+            { front: "Rúbrica", back: "Matriz con criterios y niveles de desempeño descritos." }
         ],
         quiz: [
-            {
-                question: "¿Cuál es la finalidad principal de la evaluación según la LOMLOE?",
-                options: ["Calificar al alumno", "Clasificar por nivel", "Mejorar los procesos de enseñanza-aprendizaje", "Sancionar errores"],
-                correct: 2,
-                explanation: "Es una actividad formativa centrada en la mejora del aprendizaje."
-            },
-            {
-                question: "¿Qué instrumento es una lista de Sí/No?",
-                options: ["Rúbrica", "Escala numérica", "Lista de Control", "Registro anecdótico"],
-                correct: 2,
-                explanation: "La Lista de Control registra presencia o ausencia (Sí/No)."
-            },
-            {
-                question: "Si el alumno se evalúa a sí mismo, hablamos de...",
-                options: ["Heteroevaluación", "Coevaluación", "Autoevaluación", "Evaluación recíproca"],
-                correct: 2,
-                explanation: "Autoevaluación es la valoración del propio desempeño."
-            },
-            {
-                question: "¿Qué evalúa un 'Desempeño'?",
-                options: ["Solo conocimientos", "Conocimientos + Destrezas + Actitudes", "Solo destrezas físicas", "La memoria"],
-                correct: 1,
-                explanation: "Los desempeños (ej: jugar un partido) integran saber, saber hacer y saber ser."
-            },
-            {
-                question: "¿Qué tipo de evaluación se realiza al final para calificar?",
-                options: ["Inicial", "Formativa", "Sumativa", "Diagnóstica"],
-                correct: 2,
-                explanation: "La Sumativa verifica el nivel alcanzado al final del proceso."
-            }
+            { question: "Finalidad evaluación LOMLOE", options: ["Calificar", "Clasificar", "Mejorar aprendizaje", "Sancionar"], correct: 2, explanation: "Mejorar procesos enseñanza-aprendizaje." },
+            { question: "Lista Sí/No", options: ["Rúbrica", "Escala", "Lista Control", "Anecdotario"], correct: 2, explanation: "Lista de Control." }
         ],
         practicalTips: [
-            "Enfoque: Evaluación continua y formativa, no solo calificadora.",
-            "Instrumentos: Cuestionario (Saber), Rúbrica (Saber Hacer), Lista de Control (Actitud).",
-            "Autonomía: Incluir hoja de Autoevaluación para reflexión.",
-            "Transparencia: Criterios explicados al inicio."
+            "Enfoque: Continua y formativa.",
+            "Instrumentos: Rúbrica (Saber Hacer), Lista Control (Actitud).",
+            "Autonomía: Autoevaluación."
         ]
     },
     {
         id: "topic-6",
-        title: "TEMA 6: Modelos y Estilos de Enseñanza",
+        title: "TEMA 6: Modelos y Estilos",
         color: "bg-blue-50",
         borderColor: "border-blue-200",
         textColor: "text-blue-900",
+        content: `
+      <h3>1. Jerarquía</h3>
+      <p>Modelo > Estrategia > Estilo > Técnica.</p>
+
+      <h3>2. Estrategias</h3>
+      <ul>
+        <li><strong>Instructiva:</strong> Profe decide (Seguridad).</li>
+        <li><strong>Participativa:</strong> Alumno ayuda.</li>
+        <li><strong>Emancipativa:</strong> Autonomía total.</li>
+      </ul>
+
+      <h3>3. Estilos</h3>
+      <ul>
+        <li><strong>Mando Directo:</strong> Ejecución masiva, orden.</li>
+        <li><strong>Asignación Tareas:</strong> Ritmo individual.</li>
+        <li><strong>Enseñanza Recíproca:</strong> Parejas (Ejecutante/Observador).</li>
+        <li><strong>Descubrimiento Guiado:</strong> Preguntas hacia una respuesta.</li>
+        <li><strong>Resolución Problemas:</strong> Múltiples soluciones.</li>
+      </ul>
+    `,
         flashcards: [
-            {
-                front: "Jerarquía Conceptual",
-                back: "Modelo Didáctico > Estrategia > Estilo > Técnica."
-            },
-            {
-                front: "Estrategia Instructiva",
-                back: "Profesor decide. Objetivo: seguridad y control. Estilos: Mando Directo, Asignación de Tareas."
-            },
-            {
-                front: "Estrategia Participativa",
-                back: "Cede responsabilidad al alumno. Estilos: Enseñanza Recíproca, Grupos Reducidos."
-            },
-            {
-                front: "Estrategia Emancipativa",
-                back: "Alumno asume el proceso. Estilos: Descubrimiento Guiado, Resolución de Problemas."
-            },
-            {
-                front: "Mando Directo",
-                back: "Profesor toma todas las decisiones. Ejecución masiva. Esquema: Estímulo -> Respuesta."
-            },
-            {
-                front: "Descubrimiento Guiado",
-                back: "Profesor plantea preguntas (disonancia cognitiva) para llevar al alumno a una única respuesta correcta."
-            },
-            {
-                front: "Resolución de Problemas",
-                back: "Profesor plantea un problema abierto. Alumno busca múltiples soluciones válidas. Fomenta creatividad."
-            }
+            { front: "Jerarquía", back: "Modelo > Estrategia > Estilo > Técnica." },
+            { front: "Mando Directo", back: "Profe decide todo. Ejecución masiva." },
+            { front: "Descubrimiento Guiado", back: "Preguntas hacia una respuesta única." },
+            { front: "Resolución Problemas", back: "Problema abierto, múltiples soluciones." }
         ],
         quiz: [
-            {
-                question: "¿En qué estilo de enseñanza el profesor plantea preguntas para guiar hacia una respuesta?",
-                options: ["Resolución de Problemas", "Mando Directo", "Descubrimiento Guiado", "Enseñanza Recíproca"],
-                correct: 2,
-                explanation: "El Descubrimiento Guiado usa la interrogación para guiar al alumno."
-            },
-            {
-                question: "¿Qué estrategia busca la autonomía total y 'aprender a aprender'?",
-                options: ["Instructiva", "Participativa", "Emancipativa", "Militar"],
-                correct: 2,
-                explanation: "La Emancipativa (o Cognoscitiva) busca la máxima autonomía cognitiva."
-            },
-            {
-                question: "En la Enseñanza Recíproca, ¿quién corrige al ejecutante?",
-                options: ["El profesor", "El observador (compañero)", "Nadie", "El director"],
-                correct: 1,
-                explanation: "El compañero observador es quien da el feedback usando la hoja de tareas."
-            },
-            {
-                question: "¿Para qué es útil el Mando Directo?",
-                options: ["Fomentar creatividad", "Tareas peligrosas o de orden cerrado", "Trabajo en equipo", "Relajación"],
-                correct: 1,
-                explanation: "Se usa para control total, seguridad en tareas peligrosas o técnica estricta."
-            },
-            {
-                question: "¿Qué diferencia la Resolución de Problemas del Descubrimiento Guiado?",
-                options: ["No hay diferencia", "RP busca una solución, DG muchas", "RP busca múltiples soluciones, DG una", "DG es directivo"],
-                correct: 2,
-                explanation: "La Resolución de Problemas admite múltiples soluciones válidas (divergencia)."
-            }
+            { question: "¿Estilo con preguntas hacia respuesta única?", options: ["Resolución Problemas", "Mando Directo", "Descubrimiento Guiado", "Recíproca"], correct: 2, explanation: "Descubrimiento Guiado." },
+            { question: "¿Quién corrige en Recíproca?", options: ["Profe", "Compañero", "Nadie", "Director"], correct: 1, explanation: "El compañero observador." }
         ],
         practicalTips: [
-            "Metodología Mixta: Justificar que se adaptan los estilos a la tarea (Mosston y Ashworth).",
-            "Calentamiento: Mando Directo/Asignación (seguridad/rapidez).",
-            "Parte Principal: Enseñanza Recíproca (técnica) o Resolución Problemas (táctica).",
-            "NEAE: Asignación de Tareas adaptada o Tutoría entre iguales."
+            "Mezcla estilos.",
+            "Calentamiento: Mando Directo.",
+            "Principal: Recíproca (técnica) o Resolución Problemas (táctica)."
+        ]
+    }
+];
+
+export const gameIdeas = [
+    {
+        category: "Desplazamientos y Saltos",
+        games: [
+            {
+                name: "El Castillo",
+                description: "Dividir la clase en dos equipos. Un equipo defiende una zona circular (castillo) y el otro intenta entrar sin ser tocado.",
+                variant: "Reducir el espacio del castillo o aumentar número de defensores.",
+                material: "Conos para delimitar.",
+                objective: "Mejorar la velocidad de reacción y la esquiva en desplazamientos.",
+                neae: {
+                    blind: "Uso de señales acústicas en los límites y compañero guía.",
+                    deaf: "Explicación cara a cara, pañuelos de colores para roles.",
+                    motor: "Ampliar zona de seguridad, permitir desplazamientos protegidos."
+                }
+            },
+            {
+                name: "Río de Cocodrilos",
+                description: "Atravesar el gimnasio pisando solo dentro de aros dispersos (piedras). Si tocas suelo, vuelves al inicio.",
+                variant: "Alejar los aros para obligar al salto.",
+                material: "Aros, cuerdas.",
+                objective: "Coordinar el salto con la recepción equilibrada.",
+                neae: {
+                    blind: "Relieve en los aros o guía táctil.",
+                    deaf: "Demostración visual previa.",
+                    motor: "Aros más grandes o juntos, permitir paso sin salto."
+                }
+            },
+            {
+                name: "La Cadena",
+                description: "Uno la liga. Al pillar a otro, se dan la mano y siguen pillando juntos hasta que todos estén en la cadena.",
+                variant: "La cadena se puede romper en dos si son más de 4.",
+                material: "Ninguno.",
+                objective: "Cooperación en el desplazamiento.",
+                neae: {
+                    blind: "Ir en el centro de la cadena protegido.",
+                    deaf: "Uso de petos visuales para quien la liga.",
+                    motor: "La cadena no puede correr, solo andar rápido."
+                }
+            }
+        ]
+    },
+    {
+        category: "Lanzamientos y Recepciones",
+        games: [
+            {
+                name: "Balón Torre",
+                description: "Dos equipos. Para puntuar hay que pasar el balón a un compañero subido en un banco (torre) que no puede caerse.",
+                variant: "La torre puede moverse por la línea de fondo.",
+                material: "Balón de espuma, bancos suecos.",
+                objective: "Precisión en el pase y recepción estática.",
+                neae: {
+                    blind: "Balón sonoro, la torre avisa con voz.",
+                    deaf: "Gestos claros para pedir pase.",
+                    motor: "La torre está sentada o en suelo delimitado."
+                }
+            },
+            {
+                name: "Cementerio (Balón Prisionero)",
+                description: "Dos campos. Si te dan con el balón, vas al cementerio (fondo contrario). Si coges el balón al vuelo, salvas una vida.",
+                variant: "Con 2 o 3 balones a la vez.",
+                material: "Balones de espuma.",
+                objective: "Coordinación óculo-manual y esquiva.",
+                neae: {
+                    blind: "Juega de 'escudo' protegido o lanza a zona fija.",
+                    deaf: "Atención visual periférica.",
+                    motor: "Zona protegida donde no le pueden dar, rol de pasador."
+                }
+            }
         ]
     }
 ];

@@ -1,240 +1,236 @@
 import React, { useState } from 'react';
-import { ChevronRight, RotateCcw, CheckCircle, ClipboardList } from 'lucide-react';
+import { gameIdeas } from '../data';
+import { ClipboardList, Plus, Trash2, ChevronDown, ChevronUp, Save } from 'lucide-react';
 import clsx from 'clsx';
 
-const decisionTree = [
-    {
-        id: 'neae',
-        label: 'Atención a la Diversidad (NEAE)',
-        description: 'Adaptaciones para alumnos con necesidades específicas.',
-        options: [
-            {
-                id: 'down',
-                label: 'Síndrome de Down',
-                result: [
-                    "Refuerzo positivo constante.",
-                    "Aprendizaje por imitación (tú haces, él repite).",
-                    "Explicaciones lentas y acompañadas.",
-                    "Evitar la complejidad abstracta."
-                ]
-            },
-            {
-                id: 'tea',
-                label: 'Autismo (TEA)',
-                result: [
-                    "Anticipación: Estructurar el entorno y explicar qué va a pasar antes.",
-                    "Uso de pictogramas o apoyo visual.",
-                    "Actuar sin prisas y evitar contacto físico forzado.",
-                    "Respetar sus rutinas."
-                ]
-            },
-            {
-                id: 'tdah',
-                label: 'Hiperactividad (TDAH)',
-                result: [
-                    "Tareas cortas y de éxito rápido (para la autoestima).",
-                    "Actividades de relajación.",
-                    "Darle roles activos (ayudante) para canalizar energía.",
-                    "Evitar largas explicaciones verbales."
-                ]
-            },
-            {
-                id: 'altas',
-                label: 'Altas Capacidades',
-                result: [
-                    "Ambiente dinámico y retos intelectuales.",
-                    "Fomentar que se sientan aceptados por el grupo.",
-                    "Dar roles de liderazgo o mayor complejidad en la tarea.",
-                    "Evitar la repetición mecánica."
-                ]
-            },
-            {
-                id: 'motoras',
-                label: 'Dificultades Motoras',
-                result: [
-                    "Eliminar barreras arquitectónicas.",
-                    "Adaptar material (ej. balones de espuma, implementos ligeros).",
-                    "Dar tiempos de descanso.",
-                    "Diseño de actividades empáticas (ej. vóley sentado)."
-                ]
-            }
-        ]
-    },
-    {
-        id: 'session',
-        label: 'Diseño de Sesión (Contenidos)',
-        description: 'Pautas metodológicas según el contenido a trabajar.',
-        options: [
-            {
-                id: 'habilidades',
-                label: 'Habilidades Motrices',
-                result: [
-                    "Define qué tipo de habilidad es (Locomotriz, Manipulativa, etc.).",
-                    "Trabaja desde la vivencia y la exploración.",
-                    "Evita la automatización temprana.",
-                    "Usa juegos que requieran ajuste motor."
-                ]
-            },
-            {
-                id: 'deportes',
-                label: 'Iniciación Deportiva',
-                result: [
-                    "Usa el Modelo Comprensivo (Teaching Games for Understanding).",
-                    "No pongas filas de niños esperando.",
-                    "Juegos modificados (ej: 3x3 en medio campo) para aumentar participación.",
-                    "Enseña la táctica antes que la técnica."
-                ]
-            },
-            {
-                id: 'fisica',
-                label: 'Condición Física y Salud',
-                result: [
-                    "Nunca hables de 'entrenamiento' o 'rendimiento'.",
-                    "Habla de 'Juegos de persecución' (resistencia) o 'trepa' (fuerza).",
-                    "Justifícalo siempre desde la Salud y creación de hábitos.",
-                    "Controla la frecuencia cardíaca (100-115 ppm en 6-8 años)."
-                ]
-            },
-            {
-                id: 'expresion',
-                label: 'Expresión Corporal',
-                result: [
-                    "Usa la desinhibición primero (caminar ocupando espacios).",
-                    "Empieza por el trabajo individual antes de exponerlos al grupo.",
-                    "Usa soportes musicales variados.",
-                    "Fomenta la creatividad y no la imitación de modelos cerrados."
-                ]
-            }
-        ]
-    },
-    {
-        id: 'theory',
-        label: 'Justificación Teórica',
-        description: 'Argumentos para la defensa de la programación.',
-        options: [
-            {
-                id: 'arnold',
-                label: 'Modelo de Arnold',
-                result: [
-                    "Educación EN el movimiento (Práctica/Disfrute).",
-                    "Educación ACERCA del movimiento (Teórica/Salud).",
-                    "Educación A TRAVÉS del movimiento (Valores/Social).",
-                    "Es la justificación más completa para cualquier sesión."
-                ]
-            },
-            {
-                id: 'parlebas',
-                label: 'Praxiología Motriz',
-                result: [
-                    "La sesión desarrolla la 'Conducta Motriz', no solo el movimiento.",
-                    "Analiza la Lógica Interna de la tarea (Incertidumbre).",
-                    "Fomenta la Sociomotricidad (relación con otros).",
-                    "Justifica el uso del juego como portador de significado."
-                ]
-            }
-        ]
-    }
-];
-
 export default function PracticalPage() {
-    const [history, setHistory] = useState([]); // Array of selections
-    const [currentStep, setCurrentStep] = useState(decisionTree); // Current options to show
-    const [finalResult, setFinalResult] = useState(null);
+    const [sessionData, setSessionData] = useState({
+        course: '',
+        students: '',
+        theme: '',
+        neaeType: 'none', // 'blind', 'deaf', 'motor', 'none'
+    });
 
-    const handleSelect = (option) => {
-        const newHistory = [...history, option.label];
-        setHistory(newHistory);
+    const [selectedGames, setSelectedGames] = useState([]);
+    const [showGameBank, setShowGameBank] = useState(false);
 
-        if (option.result) {
-            setFinalResult(option.result);
-            setCurrentStep(null);
-        } else if (option.options) {
-            setCurrentStep(option.options);
-        }
+    const handleInputChange = (e) => {
+        setSessionData({ ...sessionData, [e.target.name]: e.target.value });
     };
 
-    const reset = () => {
-        setHistory([]);
-        setCurrentStep(decisionTree);
-        setFinalResult(null);
+    const addGame = (game) => {
+        setSelectedGames([...selectedGames, { ...game, id: Date.now() }]); // Unique ID for list
+        setShowGameBank(false);
+    };
+
+    const removeGame = (id) => {
+        setSelectedGames(selectedGames.filter(g => g.id !== id));
+    };
+
+    const getNeaeAdaptation = (game) => {
+        if (sessionData.neaeType === 'none') return "Selecciona un tipo de NEAE arriba para ver la adaptación.";
+        return game.neae[sessionData.neaeType] || "No hay adaptación específica registrada para este NEAE en este juego.";
     };
 
     return (
-        <div className="space-y-6">
-            <div>
-                <h1 className="text-2xl font-bold text-gray-900">Asistente de Supuestos Prácticos</h1>
-                <p className="text-gray-500 text-sm">Árbol de decisión para encontrar los puntos clave de tu defensa.</p>
-            </div>
+        <div className="space-y-8 pb-20">
+            <header>
+                <h1 className="text-2xl font-bold text-gray-900">Diseñador de Sesiones (Supuestos)</h1>
+                <p className="text-gray-500 text-sm">Estructura oficial de examen: Contexto, Vinculación, Desarrollo y Evaluación.</p>
+            </header>
 
-            <div className="bg-white rounded-2xl border border-gray-100 p-6 min-h-[500px]">
-                {/* Breadcrumbs */}
-                <div className="flex items-center gap-2 text-sm text-gray-500 mb-8 overflow-x-auto pb-2">
-                    <button onClick={reset} className="hover:text-indigo-600 font-medium flex items-center gap-1">
-                        <ClipboardList size={16} />
-                        Inicio
-                    </button>
-                    {history.map((step, index) => (
-                        <React.Fragment key={index}>
-                            <ChevronRight size={14} />
-                            <span className="font-medium text-gray-900 whitespace-nowrap">{step}</span>
-                        </React.Fragment>
-                    ))}
+            {/* 1. CABECERA: Contextualización */}
+            <section className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-4">
+                <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">1</div>
+                    <h2 className="text-lg font-bold text-gray-900">Contextualización</h2>
                 </div>
 
-                {/* Selection Step */}
-                {currentStep && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-300">
-                        {currentStep.map((option) => (
-                            <button
-                                key={option.id}
-                                onClick={() => handleSelect(option)}
-                                className="text-left p-6 rounded-xl border border-gray-200 hover:border-indigo-500 hover:bg-indigo-50 transition-all group"
-                            >
-                                <h3 className="text-lg font-bold text-gray-900 group-hover:text-indigo-700 mb-2">
-                                    {option.label}
-                                </h3>
-                                {option.description && (
-                                    <p className="text-sm text-gray-500 group-hover:text-indigo-600/80">
-                                        {option.description}
-                                    </p>
-                                )}
-                            </button>
-                        ))}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Curso</label>
+                        <input
+                            type="text" name="course" placeholder="Ej: 4º Primaria"
+                            className="w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
+                            onChange={handleInputChange}
+                        />
                     </div>
-                )}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Nº Estudiantes</label>
+                        <input
+                            type="text" name="students" placeholder="Ej: 24 alumnos"
+                            className="w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">NEAE (Caso)</label>
+                        <select
+                            name="neaeType"
+                            className="w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
+                            onChange={handleInputChange}
+                            value={sessionData.neaeType}
+                        >
+                            <option value="none">Ninguno / General</option>
+                            <option value="blind">Discapacidad Visual (Ceguera)</option>
+                            <option value="deaf">Discapacidad Auditiva (Hipoacusia)</option>
+                            <option value="motor">Discapacidad Motora</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Temática</label>
+                    <input
+                        type="text" name="theme" placeholder="Ej: Habilidades Motrices Básicas"
+                        className="w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
+                        onChange={handleInputChange}
+                    />
+                </div>
+            </section>
 
-                {/* Final Result */}
-                {finalResult && (
-                    <div className="animate-in zoom-in-95 duration-300">
-                        <div className="bg-green-50 rounded-2xl p-8 border border-green-100 mb-8">
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 bg-green-100 text-green-600 rounded-lg">
-                                    <CheckCircle size={24} />
+            {/* 2. VINCULACIÓN CURRICULAR */}
+            <section className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <div className="flex items-center gap-2 mb-4">
+                    <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">2</div>
+                    <h2 className="text-lg font-bold text-gray-900">Vinculación Curricular</h2>
+                </div>
+                <div className="bg-indigo-50 p-4 rounded-xl text-indigo-900 text-sm leading-relaxed border border-indigo-100">
+                    <p className="font-medium">Competencia Específica 2:</p>
+                    <p>«Esta sesión contribuye a la Competencia Específica 2: Adaptar los elementos propios del esquema corporal y las capacidades físicas... para resolver problemas en situaciones motrices».</p>
+                </div>
+            </section>
+
+            {/* 3. DESARROLLO DE LA SESIÓN */}
+            <section className="space-y-4">
+                <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">3</div>
+                        <h2 className="text-lg font-bold text-gray-900">Desarrollo (Parte Principal)</h2>
+                    </div>
+                    <button
+                        onClick={() => setShowGameBank(!showGameBank)}
+                        className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm font-medium"
+                    >
+                        <Plus size={16} /> Añadir Juego
+                    </button>
+                </div>
+
+                {/* Game Bank Modal/Dropdown */}
+                {showGameBank && (
+                    <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-lg animate-in fade-in slide-in-from-top-2">
+                        <h3 className="font-bold text-gray-700 mb-3">Banco de Recursos</h3>
+                        <div className="space-y-4 max-h-60 overflow-y-auto pr-2">
+                            {gameIdeas.map((category, idx) => (
+                                <div key={idx}>
+                                    <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{category.category}</h4>
+                                    <div className="space-y-2">
+                                        {category.games.map((game, gIdx) => (
+                                            <button
+                                                key={gIdx}
+                                                onClick={() => addGame(game)}
+                                                className="w-full text-left p-3 hover:bg-gray-50 rounded-lg border border-gray-100 flex justify-between items-center group"
+                                            >
+                                                <span className="text-sm font-medium text-gray-700 group-hover:text-indigo-600">{game.name}</span>
+                                                <Plus size={14} className="text-gray-300 group-hover:text-indigo-600" />
+                                            </button>
+                                        ))}
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-green-900">Puntos Clave a Mencionar</h3>
-                            </div>
-                            <ul className="space-y-4">
-                                {finalResult.map((point, index) => (
-                                    <li key={index} className="flex gap-3 text-gray-700 font-medium">
-                                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2.5 shrink-0" />
-                                        {point}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div className="flex justify-center">
-                            <button
-                                onClick={reset}
-                                className="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-colors font-medium"
-                            >
-                                <RotateCcw size={20} />
-                                Nueva Consulta
-                            </button>
+                            ))}
                         </div>
                     </div>
                 )}
-            </div>
+
+                {/* Selected Games List */}
+                <div className="space-y-4">
+                    {selectedGames.length === 0 && (
+                        <div className="text-center p-8 border-2 border-dashed border-gray-200 rounded-xl text-gray-400 text-sm">
+                            No has añadido juegos aún. Pulsa "Añadir Juego".
+                        </div>
+                    )}
+
+                    {selectedGames.map((game, index) => (
+                        <div key={game.id} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm relative group">
+                            <button
+                                onClick={() => removeGame(game.id)}
+                                className="absolute top-4 right-4 text-gray-300 hover:text-red-500 transition-colors"
+                            >
+                                <Trash2 size={18} />
+                            </button>
+
+                            <h3 className="text-lg font-bold text-indigo-600 mb-4">{index + 1}. {game.name}</h3>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                                <div>
+                                    <p className="font-bold text-gray-700 mb-1">Descripción:</p>
+                                    <p className="text-gray-600 mb-3">{game.description}</p>
+
+                                    <p className="font-bold text-gray-700 mb-1">Variante:</p>
+                                    <p className="text-gray-600 mb-3">{game.variant}</p>
+
+                                    <p className="font-bold text-gray-700 mb-1">Material:</p>
+                                    <p className="text-gray-600">{game.material}</p>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <div>
+                                        <p className="font-bold text-gray-700 mb-1">Objetivo Motor:</p>
+                                        <p className="text-gray-600">{game.objective}</p>
+                                    </div>
+
+                                    <div className={clsx("p-3 rounded-lg border", sessionData.neaeType !== 'none' ? "bg-yellow-50 border-yellow-200" : "bg-gray-50 border-gray-100")}>
+                                        <p className={clsx("font-bold mb-1 flex items-center gap-2", sessionData.neaeType !== 'none' ? "text-yellow-800" : "text-gray-500")}>
+                                            ADAPTACIÓN NEAE {sessionData.neaeType !== 'none' && <span className="text-xs bg-yellow-200 px-2 py-0.5 rounded-full uppercase">{sessionData.neaeType}</span>}
+                                        </p>
+                                        <p className={clsx("text-sm", sessionData.neaeType !== 'none' ? "text-yellow-900" : "text-gray-400 italic")}>
+                                            {getNeaeAdaptation(game)}
+                                        </p>
+                                    </div>
+
+                                    <div className="h-24 border-2 border-dashed border-gray-200 rounded-lg flex items-center justify-center text-gray-400 text-xs">
+                                        [Espacio para Dibujo Esquemático]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* 4. INSTRUMENTO DE EVALUACIÓN */}
+            <section className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <div className="flex items-center gap-2 mb-4">
+                    <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">4</div>
+                    <h2 className="text-lg font-bold text-gray-900">Instrumento de Evaluación (Rúbrica)</h2>
+                </div>
+
+                <div className="overflow-x-auto">
+                    <table className="w-full text-sm text-left border-collapse">
+                        <thead>
+                            <tr className="bg-gray-50 border-b border-gray-200">
+                                <th className="p-3 font-bold text-gray-700 w-1/4">Criterio de Evaluación</th>
+                                <th className="p-3 font-bold text-gray-700 w-1/4">Bajo (0 ptos)</th>
+                                <th className="p-3 font-bold text-gray-700 w-1/4">Medio (0.5 ptos)</th>
+                                <th className="p-3 font-bold text-gray-700 w-1/4">Alto (1 pto)</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100">
+                            <tr>
+                                <td className="p-3 font-medium text-gray-900">Adapta sus movimientos a las situaciones motrices (CE.2)</td>
+                                <td className="p-3 text-gray-600">Tiene dificultades para ajustar su movimiento al espacio/compañero.</td>
+                                <td className="p-3 text-gray-600">Realiza los movimientos pero con falta de control o precisión en ocasiones.</td>
+                                <td className="p-3 text-gray-600">Realiza movimientos precisos y ajustados a la situación de juego.</td>
+                            </tr>
+                            <tr>
+                                <td className="p-3 font-medium text-gray-900">Participa activamente respetando normas</td>
+                                <td className="p-3 text-gray-600">No respeta las normas o muestra pasividad.</td>
+                                <td className="p-3 text-gray-600">Participa pero necesita recordatorios sobre las normas.</td>
+                                <td className="p-3 text-gray-600">Participa con entusiasmo y respeta siempre las normas y compañeros.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
     );
 }

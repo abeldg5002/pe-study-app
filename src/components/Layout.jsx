@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { LayoutDashboard, Brain, GraduationCap, ClipboardList, Menu, X } from 'lucide-react';
+import { LayoutDashboard, Brain, GraduationCap, ClipboardList, Menu, X, BookOpen } from 'lucide-react';
 import { useState } from 'react';
 import clsx from 'clsx';
 
@@ -9,6 +9,7 @@ export default function Layout() {
 
     const navItems = [
         { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+        { to: "/syllabus", icon: BookOpen, label: "Temario Completo" },
         { to: "/flashcards", icon: Brain, label: "Memorización" },
         { to: "/quiz", icon: GraduationCap, label: "Simulacro Examen" },
         { to: "/practical", icon: ClipboardList, label: "Supuestos Prácticos" },
