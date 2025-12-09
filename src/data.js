@@ -1,12 +1,12 @@
 
 export const topics = [
-    {
-        id: "topic-1",
-        title: "TEMA 1: Concepciones pedagógicas de la motricidad",
-        color: "bg-teal-50",
-        borderColor: "border-teal-200",
-        textColor: "text-teal-900",
-        content: `
+  {
+    id: "topic-1",
+    title: "TEMA 1: Concepciones pedagógicas de la motricidad",
+    color: "bg-teal-50",
+    borderColor: "border-teal-200",
+    textColor: "text-teal-900",
+    content: `
       <h3>1. Conceptos Clave (Definiciones para memorizar)</h3>
       <p>Estas definiciones son "carne de examen" para la primera parte.</p>
       <ul>
@@ -71,37 +71,37 @@ export const topics = [
         <li><strong>Educación "A TRAVÉS" del movimiento:</strong> (Dimensión Instrumental). Usar la EF para fines externos: salud, moral, socialización.</li>
       </ul>
     `,
-        flashcards: [
-            { front: "Educación Física (Definición actual)", back: "«Educación integral a través de las conductas motrices para la transformación personal y social» (Gómez-Rijo, 2021)." },
-            { front: "Conducta Motriz (Parlebas, 2008)", back: "«Comportamiento motor en cuanto portador de significación». Implica intencionalidad, emoción y cognición." },
-            { front: "Psicomotricidad", back: "Educación dirigida al cuerpo como entidad psicosomática, interacción entre el yo y el medio." },
-            { front: "Escuela Sueca (Ling)", back: "Analítica, salud corporal, corrección. Ejercicios construidos, estáticos, orden rígido." },
-            { front: "Escuela Alemana (Jahn)", back: "Patriótica, aparatos, esfuerzo, riesgo. Origen gimnasia artística." },
-            { front: "Escuela Británica (Arnold)", back: "Deporte, Fair Play, reglas, competición regulada." },
-            { front: "Escuela Francesa (Amorós/Hébert)", back: "Utilitaria. Movimiento natural, marcha, carrera. Entrenamiento militar." },
-            { front: "Modelo de Arnold (3 Dimensiones)", back: "1. ACERCA (Teórica). 2. EN (Práctica). 3. A TRAVÉS (Instrumental/Valores)." },
-            { front: "Sociomotricidad (Parlebas)", back: "Movimiento en relación con otros y el entorno (incertidumbre)." }
-        ],
-        quiz: [
-            { question: "¿Qué autor define la Conducta Motriz como 'comportamiento motor portador de significación'?", options: ["Gómez-Rijo", "Parlebas", "Arnold", "Ling"], correct: 1, explanation: "Parlebas (2008) acuñó el término." },
-            { question: "¿Qué Escuela introdujo el Fair Play?", options: ["Sueca", "Alemana", "Británica", "Francesa"], correct: 2, explanation: "Thomas Arnold, Escuela Británica." },
-            { question: "Según Arnold, ¿qué es la Educación A TRAVÉS del movimiento?", options: ["Teórica", "Práctica", "Instrumental", "Competitiva"], correct: 2, explanation: "Usar la EF para fines externos (salud, valores)." },
-            { question: "¿Qué ley hizo obligatoria la EF en España?", options: ["Constitución 1978", "Ley 1970", "LOGSE (1990)", "LOMLOE"], correct: 2, explanation: "La LOGSE (1990)." },
-            { question: "¿Qué caracteriza a la Escuela Sueca?", options: ["Movimiento natural", "Riesgo", "Analítica y corrección", "Deporte"], correct: 2, explanation: "Analítica, estática y correctiva." }
-        ],
-        practicalTips: [
-            "Justificación: No 'adiestrar', sino desarrollar Conducta Motriz (Parlebas).",
-            "Modelo Arnold: Trabajamos 'EN' (práctica), 'ACERCA' (reglas) y 'A TRAVÉS' (valores).",
-            "Alfabetización Física: Objetivo final es cultura motriz para la salud."
-        ]
-    },
-    {
-        id: "topic-2",
-        title: "TEMA 2: Marco Curricular y Programación",
-        color: "bg-purple-50",
-        borderColor: "border-purple-200",
-        textColor: "text-purple-900",
-        content: `
+    flashcards: [
+      { front: "Educación Física (Definición actual)", back: "«Educación integral a través de las conductas motrices para la transformación personal y social» (Gómez-Rijo, 2021)." },
+      { front: "Conducta Motriz (Parlebas, 2008)", back: "«Comportamiento motor en cuanto portador de significación». Implica intencionalidad, emoción y cognición." },
+      { front: "Psicomotricidad", back: "Educación dirigida al cuerpo como entidad psicosomática, interacción entre el yo y el medio." },
+      { front: "Escuela Sueca (Ling)", back: "Analítica, salud corporal, corrección. Ejercicios construidos, estáticos, orden rígido." },
+      { front: "Escuela Alemana (Jahn)", back: "Patriótica, aparatos, esfuerzo, riesgo. Origen gimnasia artística." },
+      { front: "Escuela Británica (Arnold)", back: "Deporte, Fair Play, reglas, competición regulada." },
+      { front: "Escuela Francesa (Amorós/Hébert)", back: "Utilitaria. Movimiento natural, marcha, carrera. Entrenamiento militar." },
+      { front: "Modelo de Arnold (3 Dimensiones)", back: "1. ACERCA (Teórica). 2. EN (Práctica). 3. A TRAVÉS (Instrumental/Valores)." },
+      { front: "Sociomotricidad (Parlebas)", back: "Movimiento en relación con otros y el entorno (incertidumbre)." }
+    ],
+    quiz: [
+      { question: "¿Qué autor define la Conducta Motriz como 'comportamiento motor portador de significación'?", options: ["Gómez-Rijo", "Parlebas", "Arnold", "Ling"], correct: 1, explanation: "Parlebas (2008) acuñó el término." },
+      { question: "¿Qué Escuela introdujo el Fair Play?", options: ["Sueca", "Alemana", "Británica", "Francesa"], correct: 2, explanation: "Thomas Arnold, Escuela Británica." },
+      { question: "Según Arnold, ¿qué es la Educación A TRAVÉS del movimiento?", options: ["Teórica", "Práctica", "Instrumental", "Competitiva"], correct: 2, explanation: "Usar la EF para fines externos (salud, valores)." },
+      { question: "¿Qué ley hizo obligatoria la EF en España?", options: ["Constitución 1978", "Ley 1970", "LOGSE (1990)", "LOMLOE"], correct: 2, explanation: "La LOGSE (1990)." },
+      { question: "¿Qué caracteriza a la Escuela Sueca?", options: ["Movimiento natural", "Riesgo", "Analítica y corrección", "Deporte"], correct: 2, explanation: "Analítica, estática y correctiva." }
+    ],
+    practicalTips: [
+      "Justificación: No 'adiestrar', sino desarrollar Conducta Motriz (Parlebas).",
+      "Modelo Arnold: Trabajamos 'EN' (práctica), 'ACERCA' (reglas) y 'A TRAVÉS' (valores).",
+      "Alfabetización Física: Objetivo final es cultura motriz para la salud."
+    ]
+  },
+  {
+    id: "topic-2",
+    title: "TEMA 2: Marco Curricular y Programación",
+    color: "bg-purple-50",
+    borderColor: "border-purple-200",
+    textColor: "text-purple-900",
+    content: `
       <h3>1. Definiciones Curriculares (LOMLOE)</h3>
       <ul>
         <li><strong>Currículo:</strong> «Conjunto de objetivos, competencias, contenidos, métodos pedagógicos y criterios de evaluación» (Art. 6 LOMLOE).</li>
@@ -134,31 +134,31 @@ export const topics = [
       <h3>5. Diseño de Proyectos: La Situación de Aprendizaje (SdA)</h3>
       <p>Estructura básica: Título, Justificación, Objetivos, Reto Final, Concreción Curricular, Metodología, Secuenciación (Movilizar, Activar, Explorar, Estructurar, Aplicar, Concluir), Evaluación.</p>
     `,
-        flashcards: [
-            { front: "Currículo (LOMLOE)", back: "Conjunto de objetivos, competencias, contenidos, métodos y criterios de evaluación." },
-            { front: "Competencias Específicas", back: "Puente entre Perfil de Salida y Saberes Básicos." },
-            { front: "Niveles de Concreción", back: "1º Gobierno, 2º Centro, 3º Aula, 4º Alumno." },
-            { front: "Competencia Específica 2 (EF)", back: "Adaptar esquema corporal y capacidades para resolver problemas motores." },
-            { front: "Secuenciación SdA", back: "Movilizar -> Activar -> Explorar -> Estructurar -> Aplicar -> Concluir." }
-        ],
-        quiz: [
-            { question: "¿Qué conecta el Perfil de Salida con los Saberes Básicos?", options: ["Objetivos", "Criterios", "Competencias Específicas", "SdA"], correct: 2, explanation: "Las Competencias Específicas." },
-            { question: "¿Nivel de concreción de la Programación Didáctica?", options: ["1º", "2º", "3º", "4º"], correct: 1, explanation: "2º Nivel (Centro)." },
-            { question: "¿Qué NO es una Competencia Específica de EF?", options: ["Vida activa", "Resolución problemas", "Rendimiento máximo", "Autorregulación"], correct: 2, explanation: "Rendimiento máximo." }
-        ],
-        practicalTips: [
-            "Estructura SdA: Título, Justificación, Objetivos, Reto.",
-            "Secuenciación: Movilizar -> ... -> Concluir.",
-            "Objetivos Motores (Troya): Situar móvil, Traslaciones, Combatir, Reproducir, Interoceptivas, Crear."
-        ]
-    },
-    {
-        id: "topic-3",
-        title: "TEMA 3: Atención a la diversidad",
-        color: "bg-indigo-50",
-        borderColor: "border-indigo-200",
-        textColor: "text-indigo-900",
-        content: `
+    flashcards: [
+      { front: "Currículo (LOMLOE)", back: "Conjunto de objetivos, competencias, contenidos, métodos y criterios de evaluación." },
+      { front: "Competencias Específicas", back: "Puente entre Perfil de Salida y Saberes Básicos." },
+      { front: "Niveles de Concreción", back: "1º Gobierno, 2º Centro, 3º Aula, 4º Alumno." },
+      { front: "Competencia Específica 2 (EF)", back: "Adaptar esquema corporal y capacidades para resolver problemas motores." },
+      { front: "Secuenciación SdA", back: "Movilizar -> Activar -> Explorar -> Estructurar -> Aplicar -> Concluir." }
+    ],
+    quiz: [
+      { question: "¿Qué conecta el Perfil de Salida con los Saberes Básicos?", options: ["Objetivos", "Criterios", "Competencias Específicas", "SdA"], correct: 2, explanation: "Las Competencias Específicas." },
+      { question: "¿Nivel de concreción de la Programación Didáctica?", options: ["1º", "2º", "3º", "4º"], correct: 1, explanation: "2º Nivel (Centro)." },
+      { question: "¿Qué NO es una Competencia Específica de EF?", options: ["Vida activa", "Resolución problemas", "Rendimiento máximo", "Autorregulación"], correct: 2, explanation: "Rendimiento máximo." }
+    ],
+    practicalTips: [
+      "Estructura SdA: Título, Justificación, Objetivos, Reto.",
+      "Secuenciación: Movilizar -> ... -> Concluir.",
+      "Objetivos Motores (Troya): Situar móvil, Traslaciones, Combatir, Reproducir, Interoceptivas, Crear."
+    ]
+  },
+  {
+    id: "topic-3",
+    title: "TEMA 3: Atención a la diversidad",
+    color: "bg-indigo-50",
+    borderColor: "border-indigo-200",
+    textColor: "text-indigo-900",
+    content: `
       <h3>1. Glosario (UNESCO 2017)</h3>
       <ul>
         <li><strong>Diversidad:</strong> Diferencias (raza, capacidad, cultura, etc.).</li>
@@ -197,32 +197,32 @@ export const topics = [
         <li><strong>Dificultades Motoras:</strong> Eliminar barreras, material adaptado, empatía.</li>
       </ul>
     `,
-        flashcards: [
-            { front: "Equidad vs Igualdad", back: "Igualdad = dar lo mismo. Equidad = dar lo que necesita cada uno." },
-            { front: "Inclusión (UNESCO)", back: "Superar obstáculos para presencia, participación y logros." },
-            { front: "Criterios Arráez", back: "1. Igualdad. 2. Ayuda/Apoyo. 3. Modificación." },
-            { front: "DUA (Moreira, 2024)", back: "Modelo que minimiza barreras físicas, sensoriales, cognitivas y culturales para lograr inclusión efectiva." },
-            { front: "Principios DUA", back: "1. Implicación (por qué). 2. Representación (qué). 3. Acción/Expresión (cómo)." }
-        ],
-        quiz: [
-            { question: "¿Qué principio DUA es la motivación?", options: ["Representación", "Acción", "Implicación", "Ninguno"], correct: 2, explanation: "Implicación (Compromiso)." },
-            { question: "Si cambio las normas, ¿qué criterio es?", options: ["Igualdad", "Ayuda", "Modificación", "Exclusión"], correct: 2, explanation: "Modificación." },
-            { question: "Adaptación clave TEA", options: ["Gritos", "Anticipación/Pictogramas", "Contacto físico", "Sorpresas"], correct: 1, explanation: "Anticipación y visuales." }
-        ],
-        practicalTips: [
-            "Down: Imitación, refuerzo.",
-            "TEA: Anticipación, pictogramas.",
-            "TDAH: Tareas cortas, roles activos.",
-            "Motoras: Material adaptado, eliminación barreras."
-        ]
-    },
-    {
-        id: "topic-4",
-        title: "TEMA 4: Contenidos Curriculares",
-        color: "bg-orange-50",
-        borderColor: "border-orange-200",
-        textColor: "text-orange-900",
-        content: `
+    flashcards: [
+      { front: "Equidad vs Igualdad", back: "Igualdad = dar lo mismo. Equidad = dar lo que necesita cada uno." },
+      { front: "Inclusión (UNESCO)", back: "Superar obstáculos para presencia, participación y logros." },
+      { front: "Criterios Arráez", back: "1. Igualdad. 2. Ayuda/Apoyo. 3. Modificación." },
+      { front: "DUA (Moreira, 2024)", back: "Modelo que minimiza barreras físicas, sensoriales, cognitivas y culturales para lograr inclusión efectiva." },
+      { front: "Principios DUA", back: "1. Implicación (por qué). 2. Representación (qué). 3. Acción/Expresión (cómo)." }
+    ],
+    quiz: [
+      { question: "¿Qué principio DUA es la motivación?", options: ["Representación", "Acción", "Implicación", "Ninguno"], correct: 2, explanation: "Implicación (Compromiso)." },
+      { question: "Si cambio las normas, ¿qué criterio es?", options: ["Igualdad", "Ayuda", "Modificación", "Exclusión"], correct: 2, explanation: "Modificación." },
+      { question: "Adaptación clave TEA", options: ["Gritos", "Anticipación/Pictogramas", "Contacto físico", "Sorpresas"], correct: 1, explanation: "Anticipación y visuales." }
+    ],
+    practicalTips: [
+      "Down: Imitación, refuerzo.",
+      "TEA: Anticipación, pictogramas.",
+      "TDAH: Tareas cortas, roles activos.",
+      "Motoras: Material adaptado, eliminación barreras."
+    ]
+  },
+  {
+    id: "topic-4",
+    title: "TEMA 4: Contenidos Curriculares",
+    color: "bg-orange-50",
+    borderColor: "border-orange-200",
+    textColor: "text-orange-900",
+    content: `
       <h3>Bloque 1: Habilidades Motrices</h3>
       <ul>
         <li><strong>Habilidad Motriz:</strong> Acción observable (correr, saltar).</li>
@@ -246,31 +246,31 @@ export const topics = [
       <h3>Bloque 5: Salud</h3>
       <p>Primaria = Salud, no rendimiento. FC niños 6-8 años: 100-115 ppm.</p>
     `,
-        flashcards: [
-            { front: "Habilidad Motriz", back: "Acción observable (correr, saltar)." },
-            { front: "Significación Motriz", back: "Intención, Decisión, Ajuste." },
-            { front: "Clasificación CAI", back: "Incertidumbre: Compañero, Adversario, Entorno." },
-            { front: "Modelo Comprensivo", back: "Primero táctica (juego), luego técnica." },
-            { front: "FC niños 6-8 años", back: "100-115 ppm." }
-        ],
-        quiz: [
-            { question: "¿Incertidumbre en Judo?", options: ["Medio", "Compañero", "Adversario", "Ninguna"], correct: 2, explanation: "Oposición (Adversario)." },
-            { question: "¿Resistencia saludable Primaria?", options: ["Anaeróbica", "Aeróbica", "Láctica", "Ninguna"], correct: 1, explanation: "Aeróbica." },
-            { question: "¿Modelo que prioriza táctica?", options: ["Técnico", "Comprensivo", "Militar", "Analítico"], correct: 1, explanation: "Comprensivo." }
-        ],
-        practicalTips: [
-            "Habilidades: Definir tipo.",
-            "Deportes: Modelo Comprensivo (3x3).",
-            "Salud: Juegos persecución, no 'entreno'."
-        ]
-    },
-    {
-        id: "topic-5",
-        title: "TEMA 5: La Evaluación",
-        color: "bg-pink-50",
-        borderColor: "border-pink-200",
-        textColor: "text-pink-900",
-        content: `
+    flashcards: [
+      { front: "Habilidad Motriz", back: "Acción observable (correr, saltar)." },
+      { front: "Significación Motriz", back: "Intención, Decisión, Ajuste." },
+      { front: "Clasificación CAI", back: "Incertidumbre: Compañero, Adversario, Entorno." },
+      { front: "Modelo Comprensivo", back: "Primero táctica (juego), luego técnica." },
+      { front: "FC niños 6-8 años", back: "100-115 ppm." }
+    ],
+    quiz: [
+      { question: "¿Incertidumbre en Judo?", options: ["Medio", "Compañero", "Adversario", "Ninguna"], correct: 2, explanation: "Oposición (Adversario)." },
+      { question: "¿Resistencia saludable Primaria?", options: ["Anaeróbica", "Aeróbica", "Láctica", "Ninguna"], correct: 1, explanation: "Aeróbica." },
+      { question: "¿Modelo que prioriza táctica?", options: ["Técnico", "Comprensivo", "Militar", "Analítico"], correct: 1, explanation: "Comprensivo." }
+    ],
+    practicalTips: [
+      "Habilidades: Definir tipo.",
+      "Deportes: Modelo Comprensivo (3x3).",
+      "Salud: Juegos persecución, no 'entreno'."
+    ]
+  },
+  {
+    id: "topic-5",
+    title: "TEMA 5: La Evaluación",
+    color: "bg-pink-50",
+    borderColor: "border-pink-200",
+    textColor: "text-pink-900",
+    content: `
       <h3>1. Conceptos</h3>
       <ul>
         <li><strong>Medir:</strong> Cuantificar (objetivo).</li>
@@ -291,28 +291,28 @@ export const topics = [
         <li><strong>Rúbrica:</strong> Matriz con niveles de desempeño descritos.</li>
       </ul>
     `,
-        flashcards: [
-            { front: "Medir vs Evaluar", back: "Medir = cuantificar. Evaluar = juicio de valor para mejora." },
-            { front: "Evaluación Formativa", back: "Durante el proceso. Fin: educar y corregir." },
-            { front: "Rúbrica", back: "Matriz con criterios y niveles de desempeño descritos." }
-        ],
-        quiz: [
-            { question: "Finalidad evaluación LOMLOE", options: ["Calificar", "Clasificar", "Mejorar aprendizaje", "Sancionar"], correct: 2, explanation: "Mejorar procesos enseñanza-aprendizaje." },
-            { question: "Lista Sí/No", options: ["Rúbrica", "Escala", "Lista Control", "Anecdotario"], correct: 2, explanation: "Lista de Control." }
-        ],
-        practicalTips: [
-            "Enfoque: Continua y formativa.",
-            "Instrumentos: Rúbrica (Saber Hacer), Lista Control (Actitud).",
-            "Autonomía: Autoevaluación."
-        ]
-    },
-    {
-        id: "topic-6",
-        title: "TEMA 6: Modelos y Estilos",
-        color: "bg-blue-50",
-        borderColor: "border-blue-200",
-        textColor: "text-blue-900",
-        content: `
+    flashcards: [
+      { front: "Medir vs Evaluar", back: "Medir = cuantificar. Evaluar = juicio de valor para mejora." },
+      { front: "Evaluación Formativa", back: "Durante el proceso. Fin: educar y corregir." },
+      { front: "Rúbrica", back: "Matriz con criterios y niveles de desempeño descritos." }
+    ],
+    quiz: [
+      { question: "Finalidad evaluación LOMLOE", options: ["Calificar", "Clasificar", "Mejorar aprendizaje", "Sancionar"], correct: 2, explanation: "Mejorar procesos enseñanza-aprendizaje." },
+      { question: "Lista Sí/No", options: ["Rúbrica", "Escala", "Lista Control", "Anecdotario"], correct: 2, explanation: "Lista de Control." }
+    ],
+    practicalTips: [
+      "Enfoque: Continua y formativa.",
+      "Instrumentos: Rúbrica (Saber Hacer), Lista Control (Actitud).",
+      "Autonomía: Autoevaluación."
+    ]
+  },
+  {
+    id: "topic-6",
+    title: "TEMA 6: Modelos y Estilos",
+    color: "bg-blue-50",
+    borderColor: "border-blue-200",
+    textColor: "text-blue-900",
+    content: `
       <h3>1. Jerarquía</h3>
       <p>Modelo > Estrategia > Estilo > Técnica.</p>
 
@@ -332,93 +332,288 @@ export const topics = [
         <li><strong>Resolución Problemas:</strong> Múltiples soluciones.</li>
       </ul>
     `,
-        flashcards: [
-            { front: "Jerarquía", back: "Modelo > Estrategia > Estilo > Técnica." },
-            { front: "Mando Directo", back: "Profe decide todo. Ejecución masiva." },
-            { front: "Descubrimiento Guiado", back: "Preguntas hacia una respuesta única." },
-            { front: "Resolución Problemas", back: "Problema abierto, múltiples soluciones." }
-        ],
-        quiz: [
-            { question: "¿Estilo con preguntas hacia respuesta única?", options: ["Resolución Problemas", "Mando Directo", "Descubrimiento Guiado", "Recíproca"], correct: 2, explanation: "Descubrimiento Guiado." },
-            { question: "¿Quién corrige en Recíproca?", options: ["Profe", "Compañero", "Nadie", "Director"], correct: 1, explanation: "El compañero observador." }
-        ],
-        practicalTips: [
-            "Mezcla estilos.",
-            "Calentamiento: Mando Directo.",
-            "Principal: Recíproca (técnica) o Resolución Problemas (táctica)."
-        ]
-    }
+    flashcards: [
+      { front: "Jerarquía", back: "Modelo > Estrategia > Estilo > Técnica." },
+      { front: "Mando Directo", back: "Profe decide todo. Ejecución masiva." },
+      { front: "Descubrimiento Guiado", back: "Preguntas hacia una respuesta única." },
+      { front: "Resolución Problemas", back: "Problema abierto, múltiples soluciones." }
+    ],
+    quiz: [
+      { question: "¿Estilo con preguntas hacia respuesta única?", options: ["Resolución Problemas", "Mando Directo", "Descubrimiento Guiado", "Recíproca"], correct: 2, explanation: "Descubrimiento Guiado." },
+      { question: "¿Quién corrige en Recíproca?", options: ["Profe", "Compañero", "Nadie", "Director"], correct: 1, explanation: "El compañero observador." }
+    ],
+    practicalTips: [
+      "Mezcla estilos.",
+      "Calentamiento: Mando Directo.",
+      "Principal: Recíproca (técnica) o Resolución Problemas (táctica)."
+    ]
+  }
 ];
 
 export const gameIdeas = [
-    {
-        category: "Desplazamientos y Saltos",
-        games: [
-            {
-                name: "El Castillo",
-                description: "Dividir la clase en dos equipos. Un equipo defiende una zona circular (castillo) y el otro intenta entrar sin ser tocado.",
-                variant: "Reducir el espacio del castillo o aumentar número de defensores.",
-                material: "Conos para delimitar.",
-                objective: "Mejorar la velocidad de reacción y la esquiva en desplazamientos.",
-                neae: {
-                    blind: "Uso de señales acústicas en los límites y compañero guía.",
-                    deaf: "Explicación cara a cara, pañuelos de colores para roles.",
-                    motor: "Ampliar zona de seguridad, permitir desplazamientos protegidos."
-                }
-            },
-            {
-                name: "Río de Cocodrilos",
-                description: "Atravesar el gimnasio pisando solo dentro de aros dispersos (piedras). Si tocas suelo, vuelves al inicio.",
-                variant: "Alejar los aros para obligar al salto.",
-                material: "Aros, cuerdas.",
-                objective: "Coordinar el salto con la recepción equilibrada.",
-                neae: {
-                    blind: "Relieve en los aros o guía táctil.",
-                    deaf: "Demostración visual previa.",
-                    motor: "Aros más grandes o juntos, permitir paso sin salto."
-                }
-            },
-            {
-                name: "La Cadena",
-                description: "Uno la liga. Al pillar a otro, se dan la mano y siguen pillando juntos hasta que todos estén en la cadena.",
-                variant: "La cadena se puede romper en dos si son más de 4.",
-                material: "Ninguno.",
-                objective: "Cooperación en el desplazamiento.",
-                neae: {
-                    blind: "Ir en el centro de la cadena protegido.",
-                    deaf: "Uso de petos visuales para quien la liga.",
-                    motor: "La cadena no puede correr, solo andar rápido."
-                }
-            }
-        ]
-    },
-    {
-        category: "Lanzamientos y Recepciones",
-        games: [
-            {
-                name: "Balón Torre",
-                description: "Dos equipos. Para puntuar hay que pasar el balón a un compañero subido en un banco (torre) que no puede caerse.",
-                variant: "La torre puede moverse por la línea de fondo.",
-                material: "Balón de espuma, bancos suecos.",
-                objective: "Precisión en el pase y recepción estática.",
-                neae: {
-                    blind: "Balón sonoro, la torre avisa con voz.",
-                    deaf: "Gestos claros para pedir pase.",
-                    motor: "La torre está sentada o en suelo delimitado."
-                }
-            },
-            {
-                name: "Cementerio (Balón Prisionero)",
-                description: "Dos campos. Si te dan con el balón, vas al cementerio (fondo contrario). Si coges el balón al vuelo, salvas una vida.",
-                variant: "Con 2 o 3 balones a la vez.",
-                material: "Balones de espuma.",
-                objective: "Coordinación óculo-manual y esquiva.",
-                neae: {
-                    blind: "Juega de 'escudo' protegido o lanza a zona fija.",
-                    deaf: "Atención visual periférica.",
-                    motor: "Zona protegida donde no le pueden dar, rol de pasador."
-                }
-            }
-        ]
-    }
+  {
+    category: "1. Habilidades Motrices Básicas (HMB)",
+    games: [
+      {
+        name: "El Suelo es Lava (Desplazamientos)",
+        description: "Desplazarse por el gimnasio subiéndose a bancos, aros o colchonetas sin tocar el suelo.",
+        variant: "Hacerlo por parejas cogidos de la mano.",
+        material: "Bancos, colchonetas, aros, plintos.",
+        objective: "Mejorar el equilibrio dinámico y la adaptación del desplazamiento.",
+        neae: {
+          blind: "Circuito cerrado con guía táctil y relieves.",
+          deaf: "Demostración visual previa del recorrido.",
+          motor: "Recorrido alternativo plano y ancho sin obstáculos de altura.",
+          down: "Recorrido simplificado y acompañamiento.",
+          tea: "Anticipación visual del recorrido (mapa).",
+          tdah: "Cronometrar tiempos cortos para mantener atención.",
+          high_cap: "Añadir tareas cognitivas (coger objetos de colores) durante el recorrido."
+        }
+      },
+      {
+        name: "La Croqueta (Giros)",
+        description: "Rodar sobre el eje longitudinal en colchonetas.",
+        variant: "Rodar transportando un balón medicinal con las manos.",
+        material: "Colchonetas.",
+        objective: "Dominio del giro sobre el eje longitudinal.",
+        neae: {
+          blind: "Superficie muy acolchada y delimitada.",
+          deaf: "Imitación del modelo.",
+          motor: "Ayuda manual para iniciar el giro.",
+          down: "Giro asistido.",
+          tea: "Espacio individual delimitado.",
+          tdah: "Competición de velocidad (carreras de croquetas).",
+          high_cap: "Combinar giro con lanzamiento final."
+        }
+      },
+      {
+        name: "Los 10 Pases (Lanzamientos)",
+        description: "Dos equipos. Deben dar 10 pases seguidos sin que el otro equipo intercepte el balón.",
+        variant: "No se puede devolver el balón a quien te lo pasó.",
+        material: "Balón de espuma.",
+        objective: "Mejorar pase y recepción en situación dinámica.",
+        neae: {
+          blind: "Balón sonoro y pases mano a mano.",
+          deaf: "Uso de petos visuales brillantes.",
+          motor: "Jugador comodín sin oposición directa.",
+          down: "Reducir número de pases (5 pases).",
+          tea: "Reglas muy claras y visuales.",
+          tdah: "Cambio de roles frecuente.",
+          high_cap: "Añadir regla de 'no repetir receptor'."
+        }
+      },
+      {
+        name: "Estatuas (Equilibrio)",
+        description: "Moverse al ritmo de la música. Cuando para, quedarse inmóvil en una postura (pata coja, etc.).",
+        variant: "Estatuas por parejas (puntos de apoyo compartidos).",
+        material: "Equipo de música.",
+        objective: "Control postural y equilibrio estático.",
+        neae: {
+          blind: "Contacto con compañero o pared.",
+          deaf: "Señal visual (pañuelo) cuando para la música.",
+          motor: "Posturas adaptadas (sentados, rodillas).",
+          down: "Imitación de posturas sencillas.",
+          tea: "Uso de pictogramas de posturas.",
+          tdah: "Cambios de ritmo muy frecuentes.",
+          high_cap: "Posturas creativas complejas."
+        }
+      }
+    ]
+  },
+  {
+    category: "2. Juegos Motores",
+    games: [
+      {
+        name: "El Balón Viajero (Cooperativo)",
+        description: "Transportar un balón gigante (o colchoneta) entre toda la clase sin usar las manos.",
+        variant: "Hacerlo con los ojos vendados (guiados por uno).",
+        material: "Balón gigante o colchoneta.",
+        objective: "Fomentar la cooperación y comunicación.",
+        neae: {
+          blind: "Contacto continuo con el objeto y compañeros.",
+          deaf: "Liderazgo visual en la estrategia.",
+          motor: "Uso de silla como soporte de empuje.",
+          down: "Posición central protegida.",
+          tea: "Rol específico definido.",
+          tdah: "Rol de director de movimiento.",
+          high_cap: "Diseñar la estrategia del grupo."
+        }
+      },
+      {
+        name: "El Pañuelo (Tradicional)",
+        description: "Dos equipos numerados. El profe dice un número y salen a coger el pañuelo.",
+        variant: "Decir operaciones matemáticas (2+2) en vez del número.",
+        material: "Pañuelo.",
+        objective: "Velocidad de reacción.",
+        neae: {
+          blind: "El pañuelo es un compañero que llama (sonido).",
+          deaf: "El profe levanta dedos con el número.",
+          motor: "Salida con ventaja de distancia.",
+          down: "Emparejamiento equilibrado.",
+          tea: "Evitar gritos excesivos.",
+          tdah: "Variar números rápidamente.",
+          high_cap: "Operaciones complejas para salir."
+        }
+      },
+      {
+        name: "La Gallinita Ciega (Sensorial)",
+        description: "Uno con ojos vendados intenta pillar a los demás guiándose por el sonido.",
+        variant: "Los demás no pueden moverse, solo hacer ruidos.",
+        material: "Antifaz.",
+        objective: "Desarrollo de la percepción auditiva.",
+        neae: {
+          blind: "Rol protagonista natural.",
+          deaf: "Jugar con vibraciones (golpes en suelo) o tacto.",
+          motor: "Espacio reducido.",
+          down: "Guía de apoyo.",
+          tea: "Anticipación del contacto físico.",
+          tdah: "Turnos cortos de gallinita.",
+          high_cap: "Identificar compañeros por voz distorsionada."
+        }
+      }
+    ]
+  },
+  {
+    category: "3. Iniciación Deportiva",
+    games: [
+      {
+        name: "Balón Torre (Invasión)",
+        description: "Pasar el balón a un compañero subido en un banco (torre) para puntuar.",
+        variant: "Dos torres por equipo.",
+        material: "Balón, bancos.",
+        objective: "Desmarque y pase.",
+        neae: {
+          blind: "Torre emite sonido constante.",
+          deaf: "Torre levanta brazos para pedir.",
+          motor: "Torre sentada o zona delimitada en suelo.",
+          down: "Torre con aro grande para recibir.",
+          tea: "Rol fijo de torre o defensor.",
+          tdah: "Rotación rápida de roles.",
+          high_cap: "Arbitraje del juego."
+        }
+      },
+      {
+        name: "Voleibol con Globos (Red/Muro)",
+        description: "Pasar el globo al campo contrario por encima de una cuerda.",
+        variant: "Usar balón de playa (más rápido).",
+        material: "Cuerda, globos.",
+        objective: "Golpeo y trayectoria.",
+        neae: {
+          blind: "Balón con cascabel (goalball adaptado).",
+          deaf: "Señales visuales de 'fuera/dentro'.",
+          motor: "Red más baja, permitir coger el balón.",
+          down: "Globo (trayectoria lenta).",
+          tea: "Delimitación clara del campo.",
+          tdah: "Partidos cortos a pocos puntos.",
+          high_cap: "Estrategia de colocación."
+        }
+      },
+      {
+        name: "Petanca (Blanco y Diana)",
+        description: "Lanzar bolas para acercarse al boliche.",
+        variant: "Usar saquitos de arena.",
+        material: "Bolas o saquitos.",
+        objective: "Precisión óculo-manual.",
+        neae: {
+          blind: "Referencia sonora en el boliche.",
+          deaf: "Sin adaptación necesaria.",
+          motor: "Canaleta o rampa de lanzamiento.",
+          down: "Distancia reducida.",
+          tea: "Turnos muy estructurados.",
+          tdah: "Lanzamientos seguidos sin mucha espera.",
+          high_cap: "Cálculo de distancias."
+        }
+      }
+    ]
+  },
+  {
+    category: "4. Expresión Corporal",
+    games: [
+      {
+        name: "El Espejo (Desinhibición)",
+        description: "Por parejas, uno hace movimientos y el otro imita como un espejo.",
+        variant: "Espejo deformante (exagerar movimiento).",
+        material: "Música de fondo.",
+        objective: "Comunicación no verbal y esquema corporal.",
+        neae: {
+          blind: "Espejo táctil (tocar para imitar).",
+          deaf: "Ideal, puramente visual.",
+          motor: "Movimientos de tren superior.",
+          down: "Movimientos lentos y sencillos.",
+          tea: "Imitar acciones cotidianas concretas.",
+          tdah: "Cambio de rol rápido.",
+          high_cap: "Crear secuencias complejas."
+        }
+      },
+      {
+        name: "Las Películas (Dramatización)",
+        description: "Representar un título de película o animal con mímica.",
+        variant: "Por equipos contra reloj.",
+        material: "Tarjetas con títulos.",
+        objective: "Expresividad y desinhibición.",
+        neae: {
+          blind: "Representar sonidos u objetos táctiles.",
+          deaf: "Su punto fuerte (lenguaje gestual).",
+          motor: "Adaptar la acción a sus posibilidades.",
+          down: "Tarjetas con dibujos (pictogramas).",
+          tea: "Temas de su interés específico.",
+          tdah: "Representaciones cortas.",
+          high_cap: "Títulos abstractos o emociones."
+        }
+      }
+    ]
+  },
+  {
+    category: "5. Condición Física y Salud",
+    games: [
+      {
+        name: "Pacman (Resistencia)",
+        description: "Pilla-pilla pero solo se puede correr por las líneas del campo.",
+        variant: "Añadir más 'fantasmas' que pillan.",
+        material: "Líneas del campo.",
+        objective: "Resistencia aeróbica lúdica.",
+        neae: {
+          blind: "Pareja guía obligatoria.",
+          deaf: "Peto distintivo para el Pacman.",
+          motor: "Zona de inmunidad o 'casa'.",
+          down: "Pausas de descanso activas.",
+          tea: "Normas espaciales claras (líneas).",
+          tdah: "Rol de Pacman frecuente.",
+          high_cap: "Estrategia de acorralamiento."
+        }
+      },
+      {
+        name: "Reptar (Fuerza)",
+        description: "Circuito de 'soldaditos' pasando bajo vallas o cuerdas.",
+        variant: "Transportar objetos en la espalda mientras reptan.",
+        material: "Vallas, cuerdas.",
+        objective: "Fuerza de tren superior y core.",
+        neae: {
+          blind: "Superficie segura y guía verbal.",
+          deaf: "Demostración.",
+          motor: "Rodar en vez de reptar si no puede.",
+          down: "Túneles anchos.",
+          tea: "Circuito cerrado y repetitivo.",
+          tdah: "Circuito cronometrado.",
+          high_cap: "Optimizar la técnica de desplazamiento."
+        }
+      },
+      {
+        name: "El Globo Zen (Flexibilidad/Relax)",
+        description: "Imaginar que somos globos que se hinchan (tensión) y deshinchan (relajación) lentamente.",
+        variant: "Tumbados en el suelo con música suave.",
+        material: "Colchonetas, música.",
+        objective: "Vuelta a la calma y control tónico.",
+        neae: {
+          blind: "Narración descriptiva suave.",
+          deaf: "Imitación visual del profesor.",
+          motor: "Adaptar postura (sentados).",
+          down: "Uso de objeto real (globo) para entender.",
+          tea: "Masaje con pelotas (propiocepción).",
+          tdah: "Relajación progresiva de Jacobson (muy guiada).",
+          high_cap: "Visualización creativa."
+        }
+      }
+    ]
+  }
 ];

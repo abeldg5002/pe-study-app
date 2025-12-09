@@ -75,6 +75,10 @@ export default function PracticalPage() {
                             <option value="blind">Discapacidad Visual (Ceguera)</option>
                             <option value="deaf">Discapacidad Auditiva (Hipoacusia)</option>
                             <option value="motor">Discapacidad Motora</option>
+                            <option value="down">Síndrome de Down</option>
+                            <option value="tea">TEA (Autismo)</option>
+                            <option value="tdah">TDAH</option>
+                            <option value="high_cap">Altas Capacidades</option>
                         </select>
                     </div>
                 </div>
