@@ -350,6 +350,44 @@ export const topics = [
   }
 ];
 
+export const neaeMagicFormulas = {
+  deaf: {
+    label: "Hipoacusia (Sordera)",
+    characteristics: "No oye explicaciones ni silbatos. Necesita ver.",
+    formula: "El docente se situará frente al alumno para facilitar la lectura labial. Se usarán apoyos visuales (gestos/pañuelos) y pictogramas para explicar la tarea."
+  },
+  down: {
+    label: "Síndrome de Down",
+    characteristics: "Menor tono muscular (hipotonía), equilibrio regular, aprende imitando.",
+    formula: "Se utilizará el aprendizaje por imitación (modelado) y demostraciones lentas. Refuerzo positivo constante ante el éxito."
+  },
+  tea: {
+    label: "TEA (Autismo)",
+    characteristics: "Necesita rutina, se agobia con cambios o ruidos fuertes, dificultad social.",
+    formula: "Estructuración del entorno y anticipación de la tarea (explicar antes qué pasará). Uso de pictogramas. Evitar contacto físico forzado."
+  },
+  tdah: {
+    label: "TDAH (Hiperactividad)",
+    characteristics: "Se distrae rápido, mucha energía, impulsivo.",
+    formula: "Asignación de roles activos (ayudante, árbitro) para canalizar su energía. Tareas cortas y dinámicas para mantener la atención."
+  },
+  motor: {
+    label: "Movilidad Reducida (Motora)",
+    characteristics: "Silla de ruedas, muletas o torpeza motriz. Se cansa antes.",
+    formula: "Eliminación de barreras arquitectónicas. Adaptación del material (balones de espuma/agarre fácil) y reducción de las distancias de juego."
+  },
+  high_cap: {
+    label: "Altas Capacidades",
+    characteristics: "Se aburre si es fácil. Puede aislarse.",
+    formula: "Ampliación de la dificultad de la tarea (retos cognitivos extra) y asignación de roles de liderazgo o tutoría de compañeros."
+  },
+  blind: {
+    label: "Discapacidad Visual",
+    characteristics: "No ve o ve muy poco. Necesita referencias auditivas y táctiles.",
+    formula: "Uso de material sonoro (balones con cascabel) y referencias táctiles. El docente o un compañero guía describirá verbalmente el entorno."
+  }
+};
+
 export const competencies = [
   { id: 1, title: "CE.1: Vida Activa", description: "Adoptar un estilo de vida activo y saludable, practicando regularmente actividades físicas y lúdicas." },
   { id: 2, title: "CE.2: Resolución Motriz", description: "Adaptar los elementos propios del esquema corporal y las capacidades físicas... para resolver problemas en situaciones motrices." },

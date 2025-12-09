@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { gameIdeas, competencies } from '../data';
-import { ClipboardList, Plus, Trash2, ChevronDown, ChevronUp, Save, Wand2, Copy } from 'lucide-react';
+import { gameIdeas, competencies, neaeMagicFormulas } from '../data';
+import { ClipboardList, Plus, Trash2, ChevronDown, ChevronUp, Save, Wand2, Copy, Sparkles, X } from 'lucide-react';
 import clsx from 'clsx';
 
 export default function PracticalPage() {
@@ -15,6 +15,7 @@ export default function PracticalPage() {
 
     const [selectedGames, setSelectedGames] = useState([]);
     const [showGameBank, setShowGameBank] = useState(false);
+    const [showNeaeTable, setShowNeaeTable] = useState(false);
     const [generatedText, setGeneratedText] = useState('');
     const [expandedCategory, setExpandedCategory] = useState(null);
 
@@ -54,7 +55,13 @@ export default function PracticalPage() {
         text += `Curso: ${sessionData.course || '[Indicar Curso]'}\n`;
         text += `Nº Alumnos: ${sessionData.students || '[Indicar Nº]'}\n`;
         text += `Temática: ${sessionData.theme || '[Indicar Tema]'}\n`;
-        text += `Atención a la Diversidad (NEAE): ${neaeLabel}\n\n`;
+        text += `Atención a la Diversidad (NEAE): ${neaeLabel}\n`;
+
+        // Add Magic Formula if NEAE is selected
+        if (sessionData.neaeType !== 'none' && neaeMagicFormulas[sessionData.neaeType]) {
+            text += `Medidas Generales de Intervención: "${neaeMagicFormulas[sessionData.neaeType].formula}"\n`;
+        }
+        text += `\n`;
 
         text += `2. VINCULACIÓN CURRICULAR\n`;
         text += `La sesión contribuye principalmente a la ${comp.title}: "${comp.description}".\n\n`;
@@ -91,11 +98,52 @@ export default function PracticalPage() {
     };
 
     return (
-        <div className="space-y-8 pb-20">
+        <div className="space-y-8 pb-20 relative">
             <header>
                 <h1 className="text-2xl font-bold text-gray-900">Diseñador de Sesiones (Supuestos)</h1>
                 <p className="text-gray-500 text-sm">Configura tu sesión y genera el texto listo para el examen.</p>
             </header>
+
+            {/* NEAE Magic Formulas Modal */}
+            {showNeaeTable && (
+                <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 backdrop-blur-sm animate-in fade-in">
+                    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
+                        <div className="p-6 border-b flex justify-between items-center bg-indigo-600 text-white">
+                            <h3 className="text-xl font-bold flex items-center gap-2">
+                                <Sparkles className="text-yellow-300" /> Fórmulas Mágicas NEAE
+                            </h3>
+                            <button onClick={() => setShowNeaeTable(false)} className="hover:bg-indigo-700 p-2 rounded-full transition-colors">
+                                <X size={24} />
+                            </button>
+                        </div>
+                        <div className="overflow-y-auto p-6">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="bg-indigo-50 text-indigo-900">
+                                        <th className="p-4 rounded-tl-lg font-bold">NEAE (Trastorno)</th>
+                                        <th className="p-4 font-bold">Características Clave</th>
+                                        <th className="p-4 rounded-tr-lg font-bold">FÓRMULA MÁGICA (Para el examen)</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-indigo-100">
+                                    {Object.entries(neaeMagicFormulas).map(([key, data]) => (
+                                        <tr key={key} className="hover:bg-gray-50">
+                                            <td className="p-4 font-bold text-gray-800">{data.label}</td>
+                                            <td className="p-4 text-gray-600 text-sm">{data.characteristics}</td>
+                                            <td className="p-4 text-indigo-700 font-medium text-sm bg-indigo-50/30 italic">"{data.formula}"</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="p-4 border-t bg-gray-50 text-right">
+                            <button onClick={() => setShowNeaeTable(false)} className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 font-medium">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* 1. CONTEXTUALIZACIÓN */}
             <section className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-4">
@@ -118,7 +166,15 @@ export default function PracticalPage() {
                         <input type="text" name="theme" placeholder="Ej: Equilibrio" className="w-full p-2 border rounded-lg" onChange={handleInputChange} />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">NEAE (Caso)</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1 flex justify-between items-center">
+                            NEAE (Caso)
+                            <button
+                                onClick={() => setShowNeaeTable(true)}
+                                className="text-xs text-indigo-600 hover:text-indigo-800 flex items-center gap-1 font-bold bg-indigo-50 px-2 py-0.5 rounded-full transition-colors"
+                            >
+                                <Sparkles size={10} /> Ver Fórmulas
+                            </button>
+                        </label>
                         <select name="neaeType" className="w-full p-2 border rounded-lg" onChange={handleInputChange} value={sessionData.neaeType}>
                             <option value="none">Ninguno / General</option>
                             <option value="blind">Discapacidad Visual</option>
