@@ -87,7 +87,12 @@ export const topics = [
       { question: "¿Qué Escuela introdujo el Fair Play?", options: ["Sueca", "Alemana", "Británica", "Francesa"], correct: 2, explanation: "Thomas Arnold, Escuela Británica." },
       { question: "Según Arnold, ¿qué es la Educación A TRAVÉS del movimiento?", options: ["Teórica", "Práctica", "Instrumental", "Competitiva"], correct: 2, explanation: "Usar la EF para fines externos (salud, valores)." },
       { question: "¿Qué ley hizo obligatoria la EF en España?", options: ["Constitución 1978", "Ley 1970", "LOGSE (1990)", "LOMLOE"], correct: 2, explanation: "La LOGSE (1990)." },
-      { question: "¿Qué caracteriza a la Escuela Sueca?", options: ["Movimiento natural", "Riesgo", "Analítica y corrección", "Deporte"], correct: 2, explanation: "Analítica, estática y correctiva." }
+      { question: "¿Qué caracteriza a la Escuela Sueca?", options: ["Movimiento natural", "Riesgo", "Analítica y corrección", "Deporte"], correct: 2, explanation: "Analítica, estática y correctiva." },
+      { question: "¿Qué define la Psicomotricidad?", options: ["Solo movimiento físico", "Interacción cuerpo-mente", "Deporte de alto rendimiento", "Gimnasia militar"], correct: 1, explanation: "Educación dirigida al cuerpo como entidad psicosomática." },
+      { question: "¿Quién es el padre de la Escuela Alemana?", options: ["P.H. Ling", "Thomas Arnold", "F.L. Jahn", "Francisco Amorós"], correct: 2, explanation: "F.L. Jahn (Turnen)." },
+      { question: "¿Qué dimensión de Arnold se refiere a la práctica en sí misma?", options: ["Acerca del", "En el", "A través del", "Sobre el"], correct: 1, explanation: "Educación EN el movimiento (valor intrínseco)." },
+      { question: "¿Qué corriente critica la psicomotricidad por ser individualista?", options: ["Expresión Corporal", "Praxiología Motriz", "Educación Deportiva", "Escuela Sueca"], correct: 1, explanation: "La Praxiología Motriz (Parlebas) propone la Sociomotricidad." },
+      { question: "¿En qué era todo ejercicio se consideraba 'educación física'?", options: ["Gimnástica Moderna", "Gimnástica Antigua", "Renacimiento", "Edad Media"], correct: 1, explanation: "Era Gimnástica Antigua (visión globalizante)." }
     ],
     practicalTips: [
       "Justificación: No 'adiestrar', sino desarrollar Conducta Motriz (Parlebas).",
@@ -144,7 +149,12 @@ export const topics = [
     quiz: [
       { question: "¿Qué conecta el Perfil de Salida con los Saberes Básicos?", options: ["Objetivos", "Criterios", "Competencias Específicas", "SdA"], correct: 2, explanation: "Las Competencias Específicas." },
       { question: "¿Nivel de concreción de la Programación Didáctica?", options: ["1º", "2º", "3º", "4º"], correct: 1, explanation: "2º Nivel (Centro)." },
-      { question: "¿Qué NO es una Competencia Específica de EF?", options: ["Vida activa", "Resolución problemas", "Rendimiento máximo", "Autorregulación"], correct: 2, explanation: "Rendimiento máximo." }
+      { question: "¿Qué NO es una Competencia Específica de EF?", options: ["Vida activa", "Resolución problemas", "Rendimiento máximo", "Autorregulación"], correct: 2, explanation: "Rendimiento máximo." },
+      { question: "¿Qué define el 'Currículo' según la LOMLOE?", options: ["Solo los libros de texto", "Conjunto de objetivos, competencias, contenidos...", "El horario escolar", "Las normas del centro"], correct: 1, explanation: "Art. 6 LOMLOE." },
+      { question: "¿A qué nivel de concreción pertenecen las Situaciones de Aprendizaje?", options: ["1º (Gobierno)", "2º (Centro)", "3º (Aula)", "4º (Alumno)"], correct: 2, explanation: "3º Nivel (Aula/Profesor)." },
+      { question: "¿Cuál es la Competencia Específica 5?", options: ["Vida Activa", "Cultura Motriz", "Sostenibilidad", "Autorregulación"], correct: 2, explanation: "Valorar el entorno e interactuar de manera sostenible." },
+      { question: "¿Qué son los Saberes Básicos?", options: ["Conocimientos, destrezas y actitudes", "Las notas", "Los deberes", "Las excursiones"], correct: 0, explanation: "Constituyen los contenidos propios del área." },
+      { question: "¿Cuál es el primer paso en la secuenciación de una SdA?", options: ["Evaluar", "Aplicar", "Movilizar", "Concluir"], correct: 2, explanation: "Movilizar (conectar con conocimientos previos)." }
     ],
     practicalTips: [
       "Estructura SdA: Título, Justificación, Objetivos, Reto.",
@@ -207,7 +217,12 @@ export const topics = [
     quiz: [
       { question: "¿Qué principio DUA es la motivación?", options: ["Representación", "Acción", "Implicación", "Ninguno"], correct: 2, explanation: "Implicación (Compromiso)." },
       { question: "Si cambio las normas, ¿qué criterio es?", options: ["Igualdad", "Ayuda", "Modificación", "Exclusión"], correct: 2, explanation: "Modificación." },
-      { question: "Adaptación clave TEA", options: ["Gritos", "Anticipación/Pictogramas", "Contacto físico", "Sorpresas"], correct: 1, explanation: "Anticipación y visuales." }
+      { question: "Adaptación clave TEA", options: ["Gritos", "Anticipación/Pictogramas", "Contacto físico", "Sorpresas"], correct: 1, explanation: "Anticipación y visuales." },
+      { question: "¿Qué significa 'Equidad'?", options: ["Dar a todos lo mismo", "Dar a cada uno lo que necesita", "Tratar a todos igual", "Ignorar diferencias"], correct: 1, explanation: "Justicia distributiva según necesidad." },
+      { question: "¿Qué principio DUA se refiere al 'QUÉ' del aprendizaje?", options: ["Implicación", "Representación", "Acción y Expresión", "Evaluación"], correct: 1, explanation: "Representación (formas de presentar la info)." },
+      { question: "Estrategia clave para TDAH", options: ["Tareas largas", "Roles pasivos", "Tareas cortas y roles activos", "Castigos"], correct: 2, explanation: "Canalizar energía y mantener atención." },
+      { question: "¿Qué NO es una medida de inclusión?", options: ["Eliminar barreras", "Segregar en aulas especiales", "Adaptar materiales", "Refuerzo positivo"], correct: 1, explanation: "La segregación es lo opuesto a la inclusión." },
+      { question: "Para un alumno con Hipoacusia, ¿qué es fundamental?", options: ["Gritar mucho", "Ubicación frente al alumno y apoyo visual", "Usar silbato", "Ignorarlo"], correct: 1, explanation: "Lectura labial y apoyos visuales." }
     ],
     practicalTips: [
       "Down: Imitación, refuerzo.",
@@ -256,7 +271,12 @@ export const topics = [
     quiz: [
       { question: "¿Incertidumbre en Judo?", options: ["Medio", "Compañero", "Adversario", "Ninguna"], correct: 2, explanation: "Oposición (Adversario)." },
       { question: "¿Resistencia saludable Primaria?", options: ["Anaeróbica", "Aeróbica", "Láctica", "Ninguna"], correct: 1, explanation: "Aeróbica." },
-      { question: "¿Modelo que prioriza táctica?", options: ["Técnico", "Comprensivo", "Militar", "Analítico"], correct: 1, explanation: "Comprensivo." }
+      { question: "¿Modelo que prioriza táctica?", options: ["Técnico", "Comprensivo", "Militar", "Analítico"], correct: 1, explanation: "Comprensivo." },
+      { question: "¿Qué es una Habilidad Motriz?", options: ["Un pensamiento", "Una acción observable (correr)", "Un sentimiento", "Una norma"], correct: 1, explanation: "Acción motora observable." },
+      { question: "¿Cuáles son las conductas perceptivo-motrices?", options: ["Fuerza y Resistencia", "Corporalidad, Espacialidad, Temporalidad", "Fútbol y Basket", "Correr y Saltar"], correct: 1, explanation: "Relacionadas con la percepción del cuerpo y entorno." },
+      { question: "Según la clasificación CAI, ¿qué define al Patinaje por Parejas?", options: ["Psicomotor", "Sociomotor de Cooperación", "Sociomotor de Oposición", "Cooperación-Oposición"], correct: 1, explanation: "Hay compañero (C) pero no adversario (A)." },
+      { question: "¿Cuál es la FC recomendada para niños 6-8 años?", options: ["60-80 ppm", "100-115 ppm", "140-160 ppm", "180+ ppm"], correct: 1, explanation: "100-115 ppm en reposo relativo/actividad ligera." },
+      { question: "¿Qué caracteriza al Juego Motor según Parlebas?", options: ["Productividad", "Certidumbre", "Improductividad y Reglas", "Aburrimiento"], correct: 2, explanation: "Es 'improductivo' (fin en sí mismo) y tiene reglas." }
     ],
     practicalTips: [
       "Habilidades: Definir tipo.",
@@ -298,7 +318,12 @@ export const topics = [
     ],
     quiz: [
       { question: "Finalidad evaluación LOMLOE", options: ["Calificar", "Clasificar", "Mejorar aprendizaje", "Sancionar"], correct: 2, explanation: "Mejorar procesos enseñanza-aprendizaje." },
-      { question: "Lista Sí/No", options: ["Rúbrica", "Escala", "Lista Control", "Anecdotario"], correct: 2, explanation: "Lista de Control." }
+      { question: "Lista Sí/No", options: ["Rúbrica", "Escala", "Lista Control", "Anecdotario"], correct: 2, explanation: "Lista de Control." },
+      { question: "¿Qué es la Evaluación Formativa?", options: ["La que se hace al final", "La que busca poner nota", "La que regula el proceso durante el aprendizaje", "La inicial"], correct: 2, explanation: "Procesual, para mejorar sobre la marcha." },
+      { question: "¿Qué es la Coevaluación?", options: ["El profe evalúa al alumno", "El alumno se evalúa a sí mismo", "Evaluación compartida/dialogada", "Evaluación externa"], correct: 2, explanation: "Evaluación compartida entre agentes." },
+      { question: "¿Qué instrumento describe niveles de desempeño?", options: ["Lista de Control", "Escala Numérica", "Rúbrica", "Examen tipo test"], correct: 2, explanation: "La Rúbrica detalla qué se espera en cada nivel." },
+      { question: "¿Qué diferencia hay entre Medir y Evaluar?", options: ["Son lo mismo", "Medir es cualitativo, Evaluar cuantitativo", "Medir es cuantificar, Evaluar es juzgar para decidir", "Evaluar es solo poner nota"], correct: 2, explanation: "Evaluar implica un juicio de valor." },
+      { question: "¿Qué es la Evaluación Recíproca?", options: ["Entre iguales (alumnos)", "Profe a alumno", "Alumno a profe", "Padres a hijos"], correct: 0, explanation: "Alumnos se evalúan entre sí (ej. hoja de observación)." }
     ],
     practicalTips: [
       "Enfoque: Continua y formativa.",
@@ -340,7 +365,12 @@ export const topics = [
     ],
     quiz: [
       { question: "¿Estilo con preguntas hacia respuesta única?", options: ["Resolución Problemas", "Mando Directo", "Descubrimiento Guiado", "Recíproca"], correct: 2, explanation: "Descubrimiento Guiado." },
-      { question: "¿Quién corrige en Recíproca?", options: ["Profe", "Compañero", "Nadie", "Director"], correct: 1, explanation: "El compañero observador." }
+      { question: "¿Quién corrige en Recíproca?", options: ["Profe", "Compañero", "Nadie", "Director"], correct: 1, explanation: "El compañero observador." },
+      { question: "¿Qué estilo fomenta más la creatividad?", options: ["Mando Directo", "Asignación de Tareas", "Resolución de Problemas", "Instrucción Directa"], correct: 2, explanation: "Plantea un problema con múltiples soluciones válidas." },
+      { question: "¿Cuál es la jerarquía correcta?", options: ["Técnica > Estilo > Estrategia", "Modelo > Estrategia > Estilo", "Estilo > Modelo > Técnica", "Estrategia > Modelo > Estilo"], correct: 1, explanation: "Modelo (más global) > Estrategia > Estilo > Técnica (más concreto)." },
+      { question: "¿Qué caracteriza al Mando Directo?", options: ["Libertad total", "Ejecución masiva y orden estricto", "Trabajo en grupos", "Creatividad"], correct: 1, explanation: "Control total del profesor." },
+      { question: "¿Qué estrategia busca la autonomía total del alumno?", options: ["Instructiva", "Participativa", "Emancipativa", "Tradicional"], correct: 2, explanation: "Emancipativa." },
+      { question: "¿En la Asignación de Tareas, qué cambia respecto al Mando Directo?", options: ["El contenido", "El ritmo de ejecución (individual)", "El profesor", "La evaluación"], correct: 1, explanation: "El alumno decide cuándo empieza y termina (ritmo)." }
     ],
     practicalTips: [
       "Mezcla estilos.",
