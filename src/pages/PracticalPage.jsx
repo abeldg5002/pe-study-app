@@ -1,23 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { gameIdeas, competencies, neaeMagicFormulas } from '../data';
-import { ClipboardList, Plus, Trash2, ChevronDown, ChevronUp, Save, Wand2, Copy, Sparkles, X } from 'lucide-react';
+import { ClipboardList, Plus, Trash2, ChevronDown, ChevronUp, Save, Wand2, Copy, Sparkles, X, Search, Check } from 'lucide-react';
 import clsx from 'clsx';
 
 export default function PracticalPage() {
-    const [sessionData, setSessionData] = useState({
-        course: '',
-        students: '',
-        theme: '',
-        neaeType: 'none',
-        competencyId: 2, // Default to CE.2
-        evalInstrument: 'rubric' // 'rubric', 'checklist', 'scale'
+    // Load initial state from localStorage if available
+    const [sessionData, setSessionData] = useState(() => {
+        const saved = localStorage.getItem('pe-session-data');
+        return saved ? JSON.parse(saved) : {
+            course: '',
+            students: '',
+            theme: '',
+            neaeType: 'none',
+            competencyId: 2, // Default to CE.2
+            evalInstrument: 'rubric' // 'rubric', 'checklist', 'scale'
+        };
     });
 
-    const [selectedGames, setSelectedGames] = useState([]);
+    const [selectedGames, setSelectedGames] = useState(() => {
+        const saved = localStorage.getItem('pe-selected-games');
+        return saved ? JSON.parse(saved) : [];
+    });
+
     const [showGameBank, setShowGameBank] = useState(false);
     const [showNeaeTable, setShowNeaeTable] = useState(false);
     const [generatedText, setGeneratedText] = useState('');
     const [expandedCategory, setExpandedCategory] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [copied, setCopied] = useState(false);
+
+    // Save to localStorage whenever data changes
+    useEffect(() => {
+        localStorage.setItem('pe-session-data', JSON.stringify(sessionData));
+    }, [sessionData]);
+
+    useEffect(() => {
+        localStorage.setItem('pe-selected-games', JSON.stringify(selectedGames));
+    }, [selectedGames]);
 
     const handleInputChange = (e) => {
         setSessionData({ ...sessionData, [e.target.name]: e.target.value });
@@ -26,10 +45,17 @@ export default function PracticalPage() {
     const addGame = (game) => {
         setSelectedGames([...selectedGames, { ...game, id: Date.now() }]);
         setShowGameBank(false);
+        setSearchTerm(''); // Reset search
     };
 
     const removeGame = (id) => {
         setSelectedGames(selectedGames.filter(g => g.id !== id));
+    };
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(generatedText);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     const getNeaeAdaptation = (game) => {
@@ -40,6 +66,56 @@ export default function PracticalPage() {
     const getCompetencyText = () => {
         const comp = competencies.find(c => c.id == sessionData.competencyId);
         return comp ? comp.description : '';
+    };
+
+    // Filter games based on search term
+    const filteredGameIdeas = gameIdeas.map(category => {
+        const categoryMatches = category.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+        if (category.subcategories) {
+            const filteredSubcats = category.subcategories.map(sub => {
+                const games = sub.games.filter(g => g.name.toLowerCase().includes(searchTerm.toLowerCase()));
+                if (games.length > 0) return { ...sub, games };
+                return null;
+            }).filter(Boolean);
+
+            if (filteredSubcats.length > 0 || categoryMatches) {
+                return { ...category, subcategories: filteredSubcats.length > 0 ? filteredSubcats : category.subcategories };
+            }
+        } else {
+            const games = category.games.filter(g => g.name.toLowerCase().includes(searchTerm.toLowerCase()));
+            if (games.length > 0 || categoryMatches) return { ...category, games: games.length > 0 ? games : category.games };
+        }
+        return null;
+    }).filter(Boolean);
+
+    // Dynamic Evaluation Criteria Generator
+    const getEvaluationCriteria = () => {
+        const criteria = [
+            {
+                concept: "Actitud y Valores",
+                description: "Participa activamente, respeta las normas y a los compañeros.",
+                rubric: ["No participa o es disruptivo.", "Participa pero a veces incumple normas.", "Participa activamente y fomenta el buen clima."]
+            }
+        ];
+
+        selectedGames.forEach(game => {
+            // Clean objective to make it a criterion
+            let obj = game.objective.charAt(0).toLowerCase() + game.objective.slice(1);
+            if (obj.endsWith('.')) obj = obj.slice(0, -1);
+
+            criteria.push({
+                concept: `Juego: ${game.name}`,
+                description: `Capacidad para ${obj} en situación de juego.`,
+                rubric: [
+                    `Tiene dificultades para ${obj}.`,
+                    `Muestra progreso al ${obj} con ayuda.`,
+                    `Consigue ${obj} con autonomía y eficacia.`
+                ]
+            });
+        });
+
+        return criteria;
     };
 
     const generateExamText = () => {
@@ -57,7 +133,6 @@ export default function PracticalPage() {
         text += `Temática: ${sessionData.theme || '[Indicar Tema]'}\n`;
         text += `Atención a la Diversidad (NEAE): ${neaeLabel}\n`;
 
-        // Add Magic Formula if NEAE is selected
         if (sessionData.neaeType !== 'none' && neaeMagicFormulas[sessionData.neaeType]) {
             text += `Medidas Generales de Intervención: "${neaeMagicFormulas[sessionData.neaeType].formula}"\n`;
         }
@@ -90,12 +165,31 @@ export default function PracticalPage() {
 
         text += `4. EVALUACIÓN\n`;
         text += `Instrumento seleccionado: ${sessionData.evalInstrument === 'rubric' ? 'Rúbrica' : sessionData.evalInstrument === 'checklist' ? 'Lista de Control' : 'Escala de Valoración'}.\n`;
-        text += `Criterios a evaluar:\n`;
-        text += `- Participación activa y respeto a las normas.\n`;
-        text += `- Adquisición de las habilidades motrices trabajadas.\n`;
+        text += `Indicadores de Logro (Aplicados a la sesión):\n`;
+
+        const criteria = getEvaluationCriteria();
+
+        if (sessionData.evalInstrument === 'rubric') {
+            criteria.forEach(c => {
+                text += `- ${c.concept}: \n`;
+                text += `  * Nivel 1 (No conseguido): ${c.rubric[0]}\n`;
+                text += `  * Nivel 2 (En proceso): ${c.rubric[1]}\n`;
+                text += `  * Nivel 3 (Conseguido): ${c.rubric[2]}\n`;
+            });
+        } else if (sessionData.evalInstrument === 'checklist') {
+            criteria.forEach(c => {
+                text += `- [ ] ${c.description} (SÍ/NO)\n`;
+            });
+        } else {
+            criteria.forEach(c => {
+                text += `- (1-5) ${c.description}\n`;
+            });
+        }
 
         setGeneratedText(text);
     };
+
+    const criteria = getEvaluationCriteria();
 
     return (
         <div className="space-y-8 pb-20 relative">
@@ -155,15 +249,15 @@ export default function PracticalPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Curso</label>
-                        <input type="text" name="course" placeholder="Ej: 4º Primaria" className="w-full p-2 border rounded-lg" onChange={handleInputChange} />
+                        <input type="text" name="course" value={sessionData.course} placeholder="Ej: 4º Primaria" className="w-full p-2 border rounded-lg" onChange={handleInputChange} />
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Nº Estudiantes</label>
-                        <input type="text" name="students" placeholder="Ej: 24" className="w-full p-2 border rounded-lg" onChange={handleInputChange} />
+                        <input type="text" name="students" value={sessionData.students} placeholder="Ej: 24" className="w-full p-2 border rounded-lg" onChange={handleInputChange} />
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Temática</label>
-                        <input type="text" name="theme" placeholder="Ej: Equilibrio" className="w-full p-2 border rounded-lg" onChange={handleInputChange} />
+                        <input type="text" name="theme" value={sessionData.theme} placeholder="Ej: Equilibrio" className="w-full p-2 border rounded-lg" onChange={handleInputChange} />
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1 flex justify-between items-center">
@@ -232,19 +326,39 @@ export default function PracticalPage() {
                 {/* Game Bank */}
                 {showGameBank && (
                     <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-lg animate-in fade-in slide-in-from-top-2 max-h-96 overflow-y-auto">
-                        <h3 className="font-bold text-gray-700 mb-3 sticky top-0 bg-white pb-2 border-b">Banco de Recursos</h3>
-                        <div className="space-y-2">
-                            {gameIdeas.map((category, idx) => (
+                        <div className="sticky top-0 bg-white pb-2 border-b z-10 space-y-3">
+                            <div className="flex justify-between items-center">
+                                <h3 className="font-bold text-gray-700">Banco de Recursos</h3>
+                                <button onClick={() => setShowGameBank(false)} className="p-1 hover:bg-gray-100 rounded-full"><X size={20} /></button>
+                            </div>
+                            <div className="relative">
+                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+                                <input
+                                    type="text"
+                                    placeholder="Buscar juego (ej: pilla, balón, relevos)..."
+                                    className="w-full pl-9 p-2 bg-gray-50 border rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    autoFocus
+                                />
+                            </div>
+                        </div>
+
+                        <div className="space-y-2 mt-3">
+                            {filteredGameIdeas.length === 0 && (
+                                <p className="text-center text-gray-400 text-sm py-4">No se encontraron juegos.</p>
+                            )}
+                            {filteredGameIdeas.map((category, idx) => (
                                 <div key={idx} className="border rounded-lg overflow-hidden">
                                     <button
                                         onClick={() => setExpandedCategory(expandedCategory === idx ? null : idx)}
                                         className="w-full p-3 bg-gray-50 text-left font-bold text-gray-700 flex justify-between items-center hover:bg-gray-100"
                                     >
                                         {category.category}
-                                        {expandedCategory === idx ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                                        {expandedCategory === idx || searchTerm ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                                     </button>
 
-                                    {expandedCategory === idx && (
+                                    {(expandedCategory === idx || searchTerm) && (
                                         <div className="p-2 bg-white space-y-4">
                                             {category.subcategories ? (
                                                 category.subcategories.map((sub, sIdx) => (
@@ -327,32 +441,49 @@ export default function PracticalPage() {
                         <table className="w-full text-sm text-left border-collapse">
                             <thead>
                                 <tr className="bg-gray-50 border-b">
-                                    <th className="p-2 font-bold text-gray-700">Criterio</th>
-                                    <th className="p-2 font-bold text-gray-700">En Proceso</th>
-                                    <th className="p-2 font-bold text-gray-700">Conseguido</th>
+                                    <th className="p-2 font-bold text-gray-700 w-1/4">Criterio / Indicador</th>
+                                    <th className="p-2 font-bold text-gray-700 w-1/4">Nivel 1 (No Conseguido)</th>
+                                    <th className="p-2 font-bold text-gray-700 w-1/4">Nivel 2 (En Proceso)</th>
+                                    <th className="p-2 font-bold text-gray-700 w-1/4">Nivel 3 (Conseguido)</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y">
-                                <tr>
-                                    <td className="p-2">Participación</td>
-                                    <td className="p-2 text-gray-500">A veces participa.</td>
-                                    <td className="p-2 text-gray-500">Participa activamente.</td>
-                                </tr>
+                                {criteria.map((c, idx) => (
+                                    <tr key={idx}>
+                                        <td className="p-3 font-medium text-gray-900">{c.concept}</td>
+                                        <td className="p-3 text-gray-500 bg-red-50/30">{c.rubric[0]}</td>
+                                        <td className="p-3 text-gray-500 bg-yellow-50/30">{c.rubric[1]}</td>
+                                        <td className="p-3 text-gray-700 font-medium bg-green-50/30">{c.rubric[2]}</td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>
                 )}
                 {sessionData.evalInstrument === 'checklist' && (
-                    <div className="bg-gray-50 p-4 rounded-lg text-sm text-gray-600">
-                        <p>☐ Respeta las normas del juego.</p>
-                        <p>☐ Coopera con los compañeros.</p>
-                        <p>☐ Aplica las habilidades motrices correctamente.</p>
+                    <div className="bg-gray-50 p-4 rounded-lg text-sm text-gray-600 space-y-2">
+                        {criteria.map((c, idx) => (
+                            <div key={idx} className="flex items-center gap-2">
+                                <div className="w-5 h-5 border-2 border-gray-300 rounded flex-shrink-0"></div>
+                                <span>{c.description}</span>
+                            </div>
+                        ))}
                     </div>
                 )}
                 {sessionData.evalInstrument === 'scale' && (
-                    <div className="bg-gray-50 p-4 rounded-lg text-sm text-gray-600">
-                        <p>1. Participación: (1) (2) (3) (4) (5)</p>
-                        <p>2. Respeto: (1) (2) (3) (4) (5)</p>
+                    <div className="bg-gray-50 p-4 rounded-lg text-sm text-gray-600 space-y-3">
+                        {criteria.map((c, idx) => (
+                            <div key={idx} className="flex items-center justify-between gap-4">
+                                <span>{idx + 1}. {c.description}</span>
+                                <div className="flex gap-1">
+                                    {[1, 2, 3, 4, 5].map(n => (
+                                        <div key={n} className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-xs text-gray-400">
+                                            {n}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 )}
             </section>
@@ -375,10 +506,14 @@ export default function PracticalPage() {
                             <Wand2 className="text-purple-400" /> Texto Generado
                         </h2>
                         <button
-                            onClick={() => navigator.clipboard.writeText(generatedText)}
-                            className="text-xs bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded-lg flex items-center gap-1 transition-colors"
+                            onClick={handleCopy}
+                            className={clsx(
+                                "text-xs px-3 py-1 rounded-lg flex items-center gap-1 transition-all duration-300",
+                                copied ? "bg-green-500 text-white" : "bg-gray-700 hover:bg-gray-600"
+                            )}
                         >
-                            <Copy size={14} /> Copiar
+                            {copied ? <Check size={14} /> : <Copy size={14} />}
+                            {copied ? "¡Copiado!" : "Copiar"}
                         </button>
                     </div>
                     <textarea
